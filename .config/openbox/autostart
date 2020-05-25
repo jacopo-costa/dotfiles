@@ -1,0 +1,6 @@
+# Autostart Apps
+
+setxkbmap it &
+picom &
+nitrogen --restore &
+tint2
