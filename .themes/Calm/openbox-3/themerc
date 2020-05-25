@@ -1,0 +1,87 @@
++---------------------------------+
+| ,-----.        ,--.             |
+| '  .--./ ,--,--.|  |,--,--,--.  |
+| |  |    ' ,-.  ||  ||        |  |
+| '  '--\ \ '-'  ||  ||  |  |  |  |
+| `-----'  `--`--' `--'`--`--`--' |
++---------------------------------+
+
+OpenBox Theme by Gekobix (https://github.com/gekobix)
+
+### Geometry
+
+border.width: 2
+menu.border.width: 2
+menu.separator.width: 2
+menu.separator.padding.width: 7
+menu.separator.padding.height: 7
+window.client.padding.width: 0
+window.client.padding.height: 0
+window.handle.width: 0
+padding.width: 7
+padding.height: 7
+
+### Border Colors
+
+window.active.border.color: #28282E
+window.active.client.color: #28282E
+window.inactive.border.color: #D7D7D1
+window.inactive.client.color: #D7D7D1
+menu.border.color: #D7D7D1
+menu.separator.color: #D7D7D1
+
+### Titlebar Colors
+
+window.active.label.text.color: #FFFFFF
+window.active.button.unpressed.image.color: #FFFFFF
+window.active.button.pressed.image.color: #FFFFFF
+window.active.button.disabled.image.color: #000000
+window.active.button.hover.image.color: #FFFFFF
+window.active.button.toggled.unpressed.image.color: #FFFFFF
+
+window.inactive.label.text.color: #28282E
+window.inactive.button.unpressed.image.color: #28282E
+window.inactive.button.pressed.image.color: #28282E
+window.inactive.button.disabled.image.color: #FFFFFF
+window.inactive.button.hover.image.color: #28282E
+window.inactive.button.toggled.unpressed.image.color: #28282E
+
+### Active Window Textures
+
+window.active.title.bg: solid flat
+window.active.title.bg.color: #28282E
+window.active.label.bg: parentrelative
+window.active.handle.bg: parentrelative
+window.active.grip.bg: parentrelative
+
+### Inactive Window Textures
+
+window.inactive.title.bg: solid flat
+window.inactive.title.bg.color: #D7D7D1
+window.inactive.label.bg: parentrelative
+window.inactive.handle.bg: parentrelative
+window.inactive.grip.bg: parentrelative
+
+### Active Window Button Textures
+
+window.active.button.disabled.image.color: #000000
+window.active.button.hover.image.color: #FFFFFF
+window.active.button.toggled.image.color: #FFFFFF
+window.active.button.iconify.unpressed.image.color: #FFFFFF
+window.active.button.max.unpressed.image.color: #FFFFFF
+window.active.button.close.unpressed.image.color: #FFFFFF
+window.active.button.iconify.pressed.image.color: #FFFFFF
+window.active.button.max.pressed.image.color: #FFFFFF
+window.active.button.close.pressed.image.color: #FFFFFF
+
+### Inactive Window Button Textures
+
+window.inactive.button.disabled.image.color: #FFFFFF
+window.inactive.button.hover.image.color: #D7D7D1
+window.inactive.button.toggled.image.color: #D7D7D1
+window.inactive.button.iconify.unpressed.image.color: #D7D7D1
+window.inactive.button.max.unpressed.image.color: #D7D7D1
+window.inactive.button.close.unpressed.image.color: #D7D7D1
+window.inactive.button.iconify.pressed.image.color: #D7D7D1
+window.inactive.button.max.pressed.image.color: #D7D7D1
+window.inactive.button.close.pressed.image.color: #D7D7D1
