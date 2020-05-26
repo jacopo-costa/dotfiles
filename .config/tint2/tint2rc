@@ -8,66 +8,40 @@
 # Background 1: Panel
 rounded = 0
 border_width = 1
-border_sides = TBLR
-background_color = #111111 100
+border_sides =
+background_color = #111111 90
 border_color = #EDEDED 100
 background_color_hover = #000000 60
 border_color_hover = #000000 30
 background_color_pressed = #000000 60
 border_color_pressed = #000000 30
 
-# Background 2: Default task, Iconified task
-rounded = 4
-border_width = 1
-border_sides = TBLR
-background_color = #777777 20
-border_color = #777777 30
-background_color_hover = #aaaaaa 22
-border_color_hover = #eaeaea 44
-background_color_pressed = #555555 4
-border_color_pressed = #eaeaea 44
+# Background 2: Taskbar
+rounded = 0
+border_width = 2
+border_sides = B
+background_color = #111111 90
+border_color = #EDEDED 100
+background_color_hover = #111111 90
+border_color_hover = #FFFFFF 100
+background_color_pressed = #111111 90
+border_color_pressed = #FFFFFF 100
 
-# Background 3: Active task
-rounded = 4
-border_width = 1
-border_sides = TBLR
-background_color = #777777 20
-border_color = #ffffff 40
-background_color_hover = #aaaaaa 22
-border_color_hover = #eaeaea 44
-background_color_pressed = #555555 4
-border_color_pressed = #eaeaea 44
-
-# Background 4: Urgent task
-rounded = 4
-border_width = 1
-border_sides = TBLR
-background_color = #aa4400 100
-border_color = #aa7733 100
-background_color_hover = #cc7700 100
-border_color_hover = #aa7733 100
-background_color_pressed = #555555 4
-border_color_pressed = #aa7733 100
-
-# Background 5: Tooltip
-rounded = 1
-border_width = 1
-border_sides = TBLR
-background_color = #222222 100
-border_color = #333333 100
-background_color_hover = #ffffaa 100
-border_color_hover = #000000 100
-background_color_pressed = #ffffaa 100
-border_color_pressed = #000000 100
+# Background 3: Systray
+rounded = 0
+border_width = 0
+border_sides =
+background_color = #EDEDED 90
+background_color_pressed = #EDEDED 90
 
 #-------------------------------------
-# Panel 1
-panel_items = T
+# Panel
+panel_items = LTSC
 panel_monitor = all
 panel_position = bottom left horizontal
-panel_size = 30% 4%
-panel_margin = 5 5
-panel_padding = 0 0 5
+panel_size = 100%
+#panel_margin = 5 5
+panel_padding = 2 2 10
 panel_background_id = 1
 wm_menu = 1
 panel_layer = normal
@@ -76,8 +50,8 @@ panel_layer = normal
 # Taskbar
 taskbar_mode = single_desktop
 taskbar_hide_if_empty = 0
-taskbar_padding = 0 0 2
-taskbar_background_id = 0
+taskbar_padding = 0 0 5
+taskbar_background_id = 2
 taskbar_active_background_id = 0
 taskbar_name = 1
 taskbar_hide_inactive_tasks = 0

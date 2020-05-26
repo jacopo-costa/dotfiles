@@ -339,7 +339,7 @@
     <!-- Keybindings for other XF86keys -->
     <keybind key="XF86Explorer">
       <action name="Execute">
-        <command>pcmanfm</command>
+        <command>thunar</command>
       </action>
     </keybind>
     <keybind key="XF86HomePage">

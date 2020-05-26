@@ -29,6 +29,14 @@
                 </action> </item>
             </menu>
         </menu>
+        <menu id="6" label="Graphics">
+            <item label="GNU Image Manipulation Program"> <action name="Execute">
+                <execute>gimp-2.10</execute>
+            </action> </item>
+            <item label="The GIMP"> <action name="Execute">
+                <execute>gimp</execute>
+            </action> </item>
+        </menu>
         <menu id="7" label="Multimedia">
             <item label="ALSA mixer"> <action name="Execute">
                 <execute>gnome-terminal -e alsamixer</execute>
@@ -78,11 +86,17 @@
                 <item label="Desktop Preferences"> <action name="Execute">
                     <execute>pcmanfm --desktop-pref</execute>
                 </action> </item>
+                <item label="Grub Customizer"> <action name="Execute">
+                    <execute>grub-customizer</execute>
+                </action> </item>
                 <item label="nitrogen"> <action name="Execute">
                     <execute>nitrogen</execute>
                 </action> </item>
                 <item label="Openbox Configuration Manager"> <action name="Execute">
                     <execute>obconf</execute>
+                </action> </item>
+                <item label="Power Manager"> <action name="Execute">
+                    <execute>xfce4-power-manager-settings</execute>
                 </action> </item>
                 <item label="Preferred Applications"> <action name="Execute">
                     <execute>libfm-pref-apps</execute>
@@ -114,6 +128,12 @@
             </action> </item>
         </menu>
         <menu id="38" label="Utilities">
+            <item label="About Xfce"> <action name="Execute">
+                <execute>xfce4-about</execute>
+            </action> </item>
+            <item label="Archive Manager"> <action name="Execute">
+                <execute>file-roller</execute>
+            </action> </item>
             <item label="compton"> <action name="Execute">
                 <execute>compton</execute>
             </action> </item>
