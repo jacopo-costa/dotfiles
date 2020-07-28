@@ -1,12 +1,13 @@
 [options]
-allow_bold = true
+#allow_bold = true
 #audible_bell = false
 #bold_is_bright = true
 #cell_height_scale = 1.0
 #cell_width_scale = 1.0
-clickable_url = true
-dynamic_title = true
-font = Monospace 12
+#clickable_url = true
+#dynamic_title = true
+font = Monospace 10
+#font = Siji 10
 #fullscreen = true
 #icon_name = terminal
 #mouse_autohide = false
@@ -17,7 +18,7 @@ font = Monospace 12
 scrollback_lines = 10000
 #search_wrap = true
 #urgent_on_bell = true
-hyperlinks = true
+#hyperlinks = false
 
 # $BROWSER is used by default if set, with xdg-open as a fallback
 #browser = xdg-open
@@ -38,23 +39,23 @@ hyperlinks = true
 #size_hints = false
 
 # "off", "left" or "right"
-scrollbar = off
+#scrollbar = off
 
 [colors]
 # If both of these are unset, cursor falls back to the foreground color,
 # and cursor_foreground falls back to the background color.
-cursor = #600000
-cursor_foreground = #EDEDED
+cursor = #B73838
+cursor_foreground = #4D2526
 
-foreground = #EDEDED
-foreground_bold = #FFFFFF
-background = #111111
+#foreground = #dcdccc
+#foreground_bold = #ffffff
+background = #1A1C1E
 
 # 20% background transparency (requires a compositor)
-#background = rgba(63, 63, 63, 0.8)
+background = rgba(26, 28, 30, 1)
 
 # If unset, will reverse foreground and background
-highlight = #600000
+highlight = #2f2f2f
 
 # Colors from color0 to color254 can be set
 color0 = #3f3f3f
