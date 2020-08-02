@@ -2,14 +2,8 @@
 
 sxhkd &
 setxkbmap it &
-picom -bc --config $HOME/.config/picom/picom.conf &
-redshift &
-feh --bg-scale $HOME/Immagini/Sfondi/wallhaven-dgrk83.jpg &
-killall -q dunst 
-dunst &
-$HOME/.config/polybar/launch.sh &
 
-bspc monitor -d 1 2 3 4
+bspc monitor -d 1 2 3 4 5
 
 bspc config border_width         	2
 bspc config window_gap          	15
@@ -24,4 +18,16 @@ bspc config focus_follows_pointer	true
 bspc rule -a Chromium desktop='^1'
 bspc rule -a Pavucontrol state=floating
 bspc rule -a Spotify desktop='^3'
-bspc rule -a Lutris desktop='^4' state=pseudo_tiled
+bspc rule -a Lutris desktop='^4'
+bspc rule -a discord desktop='^4'
+bspc rule -a TelegramDesktop desktop='^4'
+bspc rule -a Galculator state=floating
+bspc rule -a Gimp desktop='^5'
+
+## Autostart programs ##
+
+picom -bc --config $HOME/.config/picom/picom.conf &
+feh --bg-scale $HOME/Immagini/Sfondi/wallhaven-83pex1.png &
+killall dunst &
+dunst &
+$HOME/.config/polybar/launch.sh &

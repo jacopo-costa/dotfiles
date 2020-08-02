@@ -8,7 +8,7 @@ super + Return
 
 # program launcher
 super + @space
-	rofi -show run
+	rofi -show run -icon-theme "Material-Black-Cherry-Numix" -show-icons
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -24,7 +24,7 @@ XF86AudioRaiseVolume
 
 # lower volume
 XF86AudioLowerVolume
-	pamixer -d 2
+	pamixer -d 2 
 
 # play/pause
 XF86AudioPlay
@@ -58,9 +58,17 @@ XF86Mail
 XF86Explorer
 	thunar
 
+# pavucontrol
+ctrl + p
+	pavucontrol
+
 #
 # bspwm hotkeys
 #
+
+# screenshot
+Print
+	maim ~/Immagini/$(date +%s).png
 
 # quit/restart bspwm
 super + alt + {q,r}
