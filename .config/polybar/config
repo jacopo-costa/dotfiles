@@ -17,9 +17,9 @@
 ;==========================================================
 
 [colors]
-background = #1A1C1E
-background-alt = #09090A
-foreground = #CCCCCC
+background = #DD1A1C1E
+background-alt = #DD09090A
+foreground = ${xrdb:foreground}
 foreground-alt = #DFDFDF
 primary = #B73838
 secondary = #4D2526
@@ -34,30 +34,33 @@ height = 26
 radius = 0
 fixed-center = true
 
+locale = it_IT.UTF-8
+
 background = ${colors.background}
 foreground = ${colors.foreground}
 
 line-size = 2
-line-color = #f00
+line-color = ${colors.primary}
 
-border-size = 5
+border-size = 4
 border-color = #00000000
 
-padding-left = 2
+padding-left = 1
 padding-right = 0
 
-module-margin-left = 2
-module-margin-right = 2
+module-margin-left = 1
+module-margin-right = 1
 
-font-0 = SF Pro Display:fontformat=Regular:pixelsize=10;1
-font-1 = unifont:fontformat=truetype:size=10:antialias=false;1
+font-0 = Roboto Mono:style=Medium:pixelsize=10;1
+font-1 = unifont:style=truetype:size=10:antialias=false;1
 font-2 = siji:pixelsize=10;1
-font-3 = FontAwesome:fontformat=Regular:size=12;1
-font-4 = MesloLGS NF:size=12;1
+font-3 = Font Awesome 5 Free:style=Regular:size=10;1
+font-4 = Font Awesome 5 Free:style=Solid:size=10;1
+font-5 = Font Awesome 5 Brands:style=Regular:size=10;1
 
 modules-left = xwindow
 modules-center = bspwm
-modules-right = eth memory cpu temperature pulseaudio date arrow1 powermenu
+modules-right = eth pulseaudio date powermenu
 
 tray-position = left
 tray-padding = 2
@@ -82,18 +85,18 @@ type = internal/bspwm
 label-focused = %icon%
 label-focused-background = ${colors.background-alt}
 label-focused-underline= ${colors.primary}
-label-focused-padding = 2
+label-focused-padding = 1
 
 label-occupied = %icon%
-label-occupied-padding = 2
+label-occupied-padding = 1
 
 label-urgent = %icon%!
 label-urgent-background = ${colors.alert}
-label-urgent-padding = 2
+label-urgent-padding = 1
 
 label-empty = %icon%
 label-empty-foreground = ${colors.foreground-alt}
-label-empty-padding = 2
+label-empty-padding = 1
 
 ; Separator in between workspaces
 ; label-separator = |
@@ -147,15 +150,15 @@ label-disconnected = 
 
 [module/date]
 type = internal/date
-interval = 5
+interval = 1
 
-date =
-date-alt = " %Y-%m-%d"
+date = %A %d %b
+date-alt = %d-%B-%Y
 
 time = %H:%M
 time-alt = %H:%M:%S
 
-format-prefix = 
+format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
 #format-underline = #0a6cf5
 
@@ -203,9 +206,9 @@ format-spacing = 1
 format-foreground = ${colors.foreground}
 format-background = ${colors.primary}
 
-label-open = 
+label-open = "  "
 label-open-foreground = ${colors.foreground}
-label-close =  Cancella
+label-close ="  Cancella"
 label-close-foreground = ${colors.foreground}
 label-separator = |
 label-separator-foreground = ${colors.foreground-alt}
@@ -213,17 +216,17 @@ label-separator-foreground = ${colors.foreground-alt}
 
 menu-0-0 = Riavvia
 menu-0-0-exec = menu-open-1
-menu-0-1 = Spegni
+menu-0-1 = "Spegni "
 menu-0-1-exec = menu-open-2
 
 menu-1-0 = Cancella
 menu-1-0-exec = menu-open-0
-menu-1-1 = Riavvia
+menu-1-1 = "Riavvia "
 menu-1-1-exec = reboot
 
 menu-2-0 = Spegni
 menu-2-0-exec = shutdown now
-menu-2-1 = Cancella
+menu-2-1 = "Cancella "
 menu-2-1-exec = menu-open-0
 
 [settings]
@@ -232,7 +235,7 @@ screenchange-reload = true
 ;compositing-background = screen
 ;compositing-foreground = source
 ;compositing-border = over
-;pseudo-transparency = false
+pseudo-transparency = true
 
 [global/wm]
 margin-top = 0

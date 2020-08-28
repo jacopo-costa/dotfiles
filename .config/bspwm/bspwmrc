@@ -27,7 +27,7 @@ bspc rule -a Gimp desktop='^5'
 ## Autostart programs ##
 
 picom -bc --config $HOME/.config/picom/picom.conf &
-feh --bg-scale $HOME/Immagini/Sfondi/wallhaven-83pex1.png &
+feh --bg-scale $HOME/Immagini/Sfondi/wallhaven-nedgo4.jpg &
 killall dunst &
 dunst &
 $HOME/.config/polybar/launch.sh &
