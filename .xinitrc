@@ -1,7 +1,7 @@
 #!/bin/sh
 
-userresources=$HOME/.config/.Xresources
-usermodmap=$HOME/.config/.Xmodmap
+userresources=$HOME/.Xresources
+usermodmap=$HOME/.Xmodmap
 sysresources=/etc/X11/xinit/.Xresources
 sysmodmap=/etc/X11/xinit/.Xmodmap
 
@@ -50,6 +50,4 @@ fi
 
 redshift -c /home/jacopo/.config/redshift/redshift.conf &
 xsetroot -cursor_name left_ptr &
-xset s off &
-xset -dpms &
 exec bspwm
