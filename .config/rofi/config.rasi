@@ -1,0 +1,23 @@
+configuration {
+	modi:                    "window,drun";
+	width:                   40;
+	lines:                   8;
+	columns:                 1;
+	font:                    "Roboto Mono Regular 14";
+	bw:                      0;
+	location:                0;
+	padding:                 5;
+	show-icons:              true;
+	terminal:                "termite";
+  icon-theme:              "Orchis-dark";
+	drun-url-launcher:       "chromium";
+	sidebar-mode:            false;
+	theme:                   "Arc-Dark.rasi";
+  drun-show-actions:       false;
+  fixed-num-lines:         true;
+  sidebar-mode:            false;
+  eh:                      2;
+  fullscreen:              false;
+  click-to-exit:           true;
+  window-thumbnail:        true;
+}
