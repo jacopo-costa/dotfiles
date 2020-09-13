@@ -56,7 +56,7 @@ super + F9
 
 # file manager
 super + F10
-	pcmanfm
+	thunar
 
 # pavucontrol
 ctrl + alt + p
@@ -69,6 +69,14 @@ ctrl + alt + p
 # screenshot
 Print
 	maim ~/Immagini/$(date +%s).png && dunstify -I ~/.icons/screenshot.png "Screenshot creato!"
+
+# portion screenshot
+shift + Print
+	maim -s ~/Immagini/$(date +%s)-region.png && dunstify -I ~/.icons/screenshot.png "Portion Screenshot preso!"
+
+# active window screenshot
+ctrl + shift + Print
+	maim -i $(xdotool getactivewindow) ~/Immagini/$(date +%s)-$(xdotool getactivewindow).png && dunstify -I ~/.icons/screenshot.png "Screenshot finestra preso!"
 
 # quit/restart bspwm
 super + alt + {q,r}

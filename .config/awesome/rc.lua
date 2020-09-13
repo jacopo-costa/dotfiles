@@ -48,8 +48,8 @@ end
 beautiful.init("/home/jacopo/.config/awesome/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
-terminal = "kitty"
-editor = os.getenv("EDITOR") or "nano"
+terminal = "termite"
+editor = os.getenv("nvim") or "nano"
 editor_cmd = terminal .. " -e " .. editor
 
 -- Default modkey.
@@ -311,8 +311,8 @@ globalkeys = gears.table.join(
               {description = "restore minimized", group = "client"}),
 
     -- Prompt
-    awful.key({ modkey },            "r",     function () awful.screen.focused().mypromptbox:run() end,
-              {description = "run prompt", group = "launcher"}),
+    awful.key({ modkey },            "space",     function () awful.util.spawn("rofi -show drun") end,
+              {description = "run Rofi -drun", group = "launcher"}),
 
     awful.key({ modkey }, "x",
               function ()
@@ -564,5 +564,3 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- }}}
 
 awful.util.spawn("picom")
-awful.util.spawn("nitrogen --restore")
-awful.util.spawn("setxkbmap it")
