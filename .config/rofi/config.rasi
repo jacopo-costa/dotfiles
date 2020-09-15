@@ -1,12 +1,12 @@
 configuration {
 	modi:                    "window,drun";
-	width:                   40;
+	width:                   35;
 	lines:                   8;
 	columns:                 1;
-	font:                    "Roboto Mono Regular 14";
+	font:                    "Roboto Mono Medium 12";
 	bw:                      0;
 	location:                0;
-	padding:                 5;
+	padding:                 10;
 	show-icons:              true;
 	terminal:                "termite";
   icon-theme:              "Orchis-dark";
@@ -14,8 +14,7 @@ configuration {
 	sidebar-mode:            false;
 	theme:                   "Arc-Dark.rasi";
   drun-show-actions:       false;
-  fixed-num-lines:         true;
-  sidebar-mode:            false;
+  fixed-num-lines:         	true;
   eh:                      2;
   fullscreen:              false;
   click-to-exit:           true;

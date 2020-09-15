@@ -53,10 +53,9 @@ module-margin-right = 1
 
 font-0 = Roboto Mono:style=Medium:pixelsize=10;1
 font-1 = unifont:style=truetype:size=10:antialias=false;1
-font-2 = siji:pixelsize=10;1
-font-3 = Font Awesome 5 Free:style=Regular:size=10;1
-font-4 = Font Awesome 5 Free:style=Solid:size=10;1
-font-5 = Font Awesome 5 Brands:style=Regular:size=10;1
+font-2 = Font Awesome 5 Free:style=Regular:size=10;1
+font-3 = Font Awesome 5 Free:style=Solid:size=10;1
+font-4 = Font Awesome 5 Brands:style=Regular:size=10;1
 
 modules-left = xwindow
 modules-center = bspwm

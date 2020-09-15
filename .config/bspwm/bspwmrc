@@ -30,10 +30,9 @@ bspc rule -a Gimp-2.10 desktop='^5' follow=off
 
 floatDesktop &
 /usr/bin/lxpolkit &
-picom -b --config $HOME/.config/picom/picom.conf &
+picom -b --experimental-backends --backend glx --config $HOME/.config/picom/picom.conf &
 killall dunst &
 dunst &
 $HOME/.config/polybar/launch.sh &
 feh --bg-scale ~/Immagini/Sfondi/wallhaven-6kxmj6.jpg &
 g213-led -a 95AEC7 &
-blueman-applet &
