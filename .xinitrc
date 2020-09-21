@@ -52,4 +52,4 @@ redshift -c /home/jacopo/.config/redshift/redshift.conf &
 xsetroot -cursor_name left_ptr &
 xset -dpms &
 xset s off &
-exec bspwm
+exec openbox-session

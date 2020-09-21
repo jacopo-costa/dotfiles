@@ -268,8 +268,32 @@
     </keybind>
     <!-- Keybindings for window switching -->
     <keybind key="A-Tab">
-      <action name="Execute">
-        <command>rofi -show window</command>
+      <action name="NextWindow">
+        <finalactions>
+          <action name="Focus"/>
+          <action name="Raise"/>
+          <action name="Unshade"/>
+        </finalactions>
+      </action>
+    </keybind>
+    <keybind key="A-S-Tab">
+      <action name="PreviousWindow">
+        <finalactions>
+          <action name="Focus"/>
+          <action name="Raise"/>
+          <action name="Unshade"/>
+        </finalactions>
+      </action>
+    </keybind>
+    <keybind key="C-A-Tab">
+      <action name="NextWindow">
+        <panels>yes</panels>
+        <desktop>yes</desktop>
+        <finalactions>
+          <action name="Focus"/>
+          <action name="Raise"/>
+          <action name="Unshade"/>
+        </finalactions>
       </action>
     </keybind>
     <!-- Keybindings for window switching with the arrow keys -->
@@ -315,7 +339,7 @@
         <command>bash -c '~/.scripts/notify/change-volume mute'</command>
       </action>
     </keybind>
-    <!-- PlayerCTL control -->
+    <!-- MPD control -->
     <keybind key="XF86AudioStop">
       <action name="Execute">
         <command>playerctl --all-players stop</command>
@@ -347,36 +371,16 @@
         <command>chromium</command>
       </action>
     </keybind>
-    <!-- Rofi launcher -->
     <keybind key="W-space">
       <action name="Execute">
         <command>rofi -show drun</command>
       </action>
     </keybind>
-    <!-- Terminal -->
     <keybind key="C-A-t">
       <action name="Execute">
         <command>termite</command>
       </action>
     </keybind>
-    <!-- Quick HTOP -->
-    <keybind key="C-Escape">
-      <action name="Execute">
-        <command>termite -e htop</command>
-      </action>
-    </keybind>
-    <!-- Screenshots -->
-    <keybind key="Print">
-      <action name="Execute">
-        <command><![CDATA[maim -o ~/Immagini/$(date +%s).png && dunstify -I ~/.icons/screenshot.png "Screenshot creato!"]]></command>
-      </action>
-    </keybind>
-    <keybind key="S-Print">
-      <action name="Execute">
-        <command><![CDATA[maim -o -s ~/Immagini/$(date +%s)-region.png && dunstify -I ~/.icons/screenshot.png "Portion Screenshot preso!"]]></command>
-      </action>
-    </keybind>
-    
   </keyboard>
   <mouse>
     <dragThreshold>1</dragThreshold>

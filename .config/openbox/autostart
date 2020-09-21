@@ -1,6 +1,12 @@
 # Autostart Apps
 
-setxkbmap it &
-picom -b --config $HOME/.config/picom/picom.conf &
-nitrogen --restore &
+setxkbmap -option compose:rctrl &
+lxpolkit &
+pcmanfm --desktop &
+picom -b --experimental-backends --backend glx --config $HOME/.config/picom/picom.conf &
+killall dunst &
+dunst &
+g213-led -a FF2233 &
+nm-applet &
+parcellite &
 tint2

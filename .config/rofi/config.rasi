@@ -1,6 +1,6 @@
 configuration {
 	modi:                    "window,drun";
-	width:                   35;
+	width:                   30;
 	lines:                   8;
 	columns:                 1;
 	font:                    "Roboto Mono Medium 12";
