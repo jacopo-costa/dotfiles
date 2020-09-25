@@ -42,6 +42,8 @@
                   'Active' - where the active window is -->
   </placement>
   <theme>
+    <cornerRadius>8</cornerRadius>
+    <cornerRadius menu="yes">8</cornerRadius>
     <name>Calm</name>
     <titleLayout>NLIMC</titleLayout>
     <!--
@@ -178,96 +180,71 @@
   </dock>
   <keyboard>
     <chainQuitKey>C-g</chainQuitKey>
-
     <!-- Keybindings for desktop switching -->
     <keybind key="C-A-Left">
       <action name="GoToDesktop">
         <to>left</to>
-        <wrap>yes</wrap>
+        <wrap>no</wrap>
       </action>
     </keybind>
     <keybind key="C-A-Right">
       <action name="GoToDesktop">
         <to>right</to>
-        <wrap>yes</wrap>
+        <wrap>no</wrap>
       </action>
     </keybind>
     <keybind key="C-A-Up">
       <action name="GoToDesktop">
         <to>up</to>
-        <wrap>yes</wrap>
+        <wrap>no</wrap>
       </action>
     </keybind>
     <keybind key="C-A-Down">
       <action name="GoToDesktop">
         <to>down</to>
-        <wrap>yes</wrap>
+        <wrap>no</wrap>
       </action>
     </keybind>
-    <keybind key="W-S-Left">
+    <keybind key="S-A-Left">
       <action name="SendToDesktop">
         <to>left</to>
-        <wrap>yes</wrap>
+        <wrap>no</wrap>
       </action>
     </keybind>
-    <keybind key="W-S-Right">
+    <keybind key="S-A-Right">
       <action name="SendToDesktop">
         <to>right</to>
-        <wrap>yes</wrap>
+        <wrap>no</wrap>
       </action>
     </keybind>
-    <keybind key="W-S-Up">
+    <keybind key="S-A-Up">
       <action name="SendToDesktop">
         <to>up</to>
-        <wrap>yes</wrap>
+        <wrap>no</wrap>
       </action>
     </keybind>
-    <keybind key="W-S-Down">
+    <keybind key="S-A-Down">
       <action name="SendToDesktop">
         <to>down</to>
-        <wrap>yes</wrap>
+        <wrap>no</wrap>
       </action>
     </keybind>
-    <keybind key="W-S-1">
-      <action name="SendToDesktop">
-        <to>1</to>
-        <follow>no</follow>
-      </action>
-    </keybind>
-    <keybind key="W-S-2">
-      <action name="SendToDesktop">
-        <to>2</to>
-        <follow>no</follow>
-      </action>
-    </keybind>
-    <keybind key="W-S-3">
-      <action name="SendToDesktop">
-        <to>3</to>
-        <follow>no</follow>
-      </action>
-    </keybind>
-    <keybind key="W-S-4">
-      <action name="SendToDesktop">
-        <to>4</to>
-        <follow>no</follow>
-      </action>
-    </keybind>
-    <keybind key="W-1">
+    <keybind key="W-F1">
       <action name="GoToDesktop">
         <to>1</to>
       </action>
     </keybind>
-    <keybind key="W-2">
+    <keybind key="W-F2">
       <action name="GoToDesktop">
         <to>2</to>
       </action>
     </keybind>
-    <keybind key="W-3">
+    <keybind key="W-F3">
       <action name="GoToDesktop">
         <to>3</to>
       </action>
     </keybind>
-    <keybind key="W-4">
+    <keybind key="W-F4">
       <action name="GoToDesktop">
         <to>4</to>
       </action>
@@ -275,111 +252,8 @@
     <keybind key="W-d">
       <action name="ToggleShowDesktop"/>
     </keybind>
-
-    <!-- Tiling Windows -->
-    <keybind key="W-KP_7">
-      <action name="UnmaximizeFull"/>
-      <action name="MoveResizeTo">
-        <x>0</x>
-        <y>0</y>
-        <width>50%</width>
-        <height>50%</height>
-      </action>
-    </keybind>
-    <keybind key="W-KP_8">
-      <action name="UnmaximizeFull"/>
-      <action name="MoveResizeTo">
-        <x>0%</x>
-        <y>0</y>
-        <width>100%</width>
-        <height>50%</height>
-      </action>
-    </keybind>
-    <keybind key="W-KP_9">
-      <action name="UnmaximizeFull"/>
-      <action name="MoveResizeTo">
-        <x>50%</x>
-        <y>0</y>
-        <width>50%</width>
-        <height>50%</height>
-      </action>
-    </keybind>
-    <keybind key="W-KP_4">
-      <action name="UnmaximizeFull"/>
-      <action name="MoveResizeTo">
-        <x>0</x>
-        <y>0%</y>
-        <width>50%</width>
-        <height>100%</height>
-      </action>
-    </keybind>
-    <keybind key="W-KP_6">
-      <action name="UnmaximizeFull"/>
-      <action name="MoveResizeTo">
-        <x>50%</x>
-        <y>0%</y>
-        <width>50%</width>
-        <height>100%</height>
-      </action>
-    </keybind>
-    <keybind key="W-KP_1">
-      <action name="UnmaximizeFull"/>
-      <action name="MoveResizeTo">
-        <x>0</x>
-        <y>50%</y>
-        <width>50%</width>
-        <height>50%</height>
-      </action>
-    </keybind>
-    <keybind key="W-KP_2">
-      <action name="UnmaximizeFull"/>
-      <action name="MoveResizeTo">
-        <x>0%</x>
-        <y>50%</y>
-        <width>100%</width>
-        <height>50%</height>
-      </action>
-    </keybind>
-    <keybind key="W-KP_3">
-      <action name="UnmaximizeFull"/>
-      <action name="MoveResizeTo">
-        <x>50%</x>
-        <y>50%</y>
-        <width>50%</width>
-        <height>50%</height>
-      </action>
-    </keybind>
-    <keybind key="W-KP_0">
-      <action name="Iconify"/>
-    </keybind>
-    <keybind key="W-KP_5">
-      <action name="ToggleMaximize"/>
-    </keybind>
-    <keybind key="W-Right">
-      <action name="UnmaximizeFull"/>
-      <action name="GrowToEdgeEast"/>
-    </keybind>
-    <keybind key="W-Left">
-      <action name="UnmaximizeFull"/>
-      <action name="GrowToEdgeWest"/>
-    </keybind>
-    <keybind key="W-Down">
-      <action name="UnmaximizeFull"/>
-      <action name="GrowToEdgeSouth"/>
-    </keybind>
-    <keybind key="W-Up">
-      <action name="UnmaximizeFull"/>
-      <action name="GrowToEdgeNorth"/>
-    </keybind>
-    <keybind key="S-W-b">
-      <action name="ToggleDecorations"/>
-    </keybind>
-    <keybind key="A-Return">
-      <action name="ToggleFullscreen"/>
-    </keybind>
-
     <!-- Keybindings for windows -->
-    <keybind key="W-q">
+    <keybind key="A-F4">
       <action name="Close"/>
     </keybind>
     <keybind key="A-Escape">
@@ -392,43 +266,63 @@
         <menu>client-menu</menu>
       </action>
     </keybind>
-
     <!-- Keybindings for window switching -->
     <keybind key="A-Tab">
-      <action name="Execute">
-        <command>rofi -show window</command>
+      <action name="NextWindow">
+        <finalactions>
+          <action name="Focus"/>
+          <action name="Raise"/>
+          <action name="Unshade"/>
+        </finalactions>
       </action>
     </keybind>
-
+    <keybind key="A-S-Tab">
+      <action name="PreviousWindow">
+        <finalactions>
+          <action name="Focus"/>
+          <action name="Raise"/>
+          <action name="Unshade"/>
+        </finalactions>
+      </action>
+    </keybind>
+    <keybind key="C-A-Tab">
+      <action name="NextWindow">
+        <panels>yes</panels>
+        <desktop>yes</desktop>
+        <finalactions>
+          <action name="Focus"/>
+          <action name="Raise"/>
+          <action name="Unshade"/>
+        </finalactions>
+      </action>
+    </keybind>
     <!-- Keybindings for window switching with the arrow keys -->
-    <keybind key="W-A-Right">
+    <keybind key="W-S-Right">
       <action name="DirectionalCycleWindows">
         <direction>right</direction>
       </action>
     </keybind>
-    <keybind key="W-A-Left">
+    <keybind key="W-S-Left">
       <action name="DirectionalCycleWindows">
         <direction>left</direction>
       </action>
     </keybind>
-    <keybind key="W-A-Up">
+    <keybind key="W-S-Up">
       <action name="DirectionalCycleWindows">
         <direction>up</direction>
       </action>
     </keybind>
-    <keybind key="W-A-Down">
+    <keybind key="W-S-Down">
       <action name="DirectionalCycleWindows">
         <direction>down</direction>
       </action>
     </keybind>
-
     <!-- Keybindings for volume stuff -->
     <keybind key="C-A-p">
       <action name="Execute">
         <command>pavucontrol</command>
       </action>
     </keybind>
-
     <!-- volume control -->
     <keybind key="XF86AudioRaiseVolume">
       <action name="Execute">
@@ -445,8 +339,7 @@
         <command>bash -c '~/.scripts/notify/change-volume mute'</command>
       </action>
     </keybind>
-
-    <!-- PlayerCTL control -->
+    <!-- MPD control -->
     <keybind key="XF86AudioStop">
       <action name="Execute">
         <command>playerctl --all-players stop</command>
@@ -467,7 +360,6 @@
         <command>playerctl --player=playerctld next</command>
       </action>
     </keybind>
-
     <!-- Keybindings for other things -->
     <keybind key="W-e">
       <action name="Execute">
@@ -479,37 +371,14 @@
         <command>chromium</command>
       </action>
     </keybind>
-
-    <!-- Rofi launcher -->
     <keybind key="W-space">
       <action name="Execute">
         <command>rofi -show drun</command>
       </action>
     </keybind>
-
-    <!-- Terminal -->
     <keybind key="C-A-t">
       <action name="Execute">
         <command>termite</command>
-      </action>
-    </keybind>
-
-    <!-- Quick HTOP -->
-    <keybind key="C-Escape">
-      <action name="Execute">
-        <command>termite -e htop</command>
-      </action>
-    </keybind>
-
-    <!-- Screenshots -->
-    <keybind key="Print">
-      <action name="Execute">
-        <command>bash -c '~/.scripts/makeScreenshot full'</command>
-      </action>
-    </keybind>
-    <keybind key="S-Print">
-      <action name="Execute">
-        <command><![CDATA[]]></command>
       </action>
     </keybind>
   </keyboard>
@@ -531,7 +400,7 @@
         <action name="Raise"/>
       </mousebind>
       <mousebind button="A-Left" action="Click">
-        <action name="Unshade"/>1
+        <action name="Unshade"/>
       </mousebind>
       <mousebind button="A-Left" action="Drag">
         <action name="Move"/>

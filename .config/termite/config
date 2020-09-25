@@ -4,9 +4,10 @@
 #bold_is_bright = true
 #cell_height_scale = 1.0
 #cell_width_scale = 1.0
-clickable_url = true
-dynamic_title = true
-font = RobotoMono Regular 10
+#clickable_url = true
+#dynamic_title = true
+font = Monospace 12
+#font = Siji 10
 #fullscreen = true
 #icon_name = terminal
 #mouse_autohide = false
@@ -17,16 +18,16 @@ font = RobotoMono Regular 10
 scrollback_lines = 10000
 #search_wrap = true
 #urgent_on_bell = true
-#hyperlinks = false
+hyperlinks = true
 
 # $BROWSER is used by default if set, with xdg-open as a fallback
-browser = chromium
+#browser = xdg-open
 
 # "system", "on" or "off"
-cursor_blink = system
+#cursor_blink = system
 
 # "block", "underline" or "ibeam"
-cursor_shape = ibeam
+#cursor_shape = block
 
 # Hide links that are no longer valid in url select overlay mode
 #filter_unmatched_urls = true
@@ -43,36 +44,36 @@ cursor_shape = ibeam
 [colors]
 # If both of these are unset, cursor falls back to the foreground color,
 # and cursor_foreground falls back to the background color.
-#cursor = #dcdccc
-#cursor_foreground = #dcdccc
+#cursor = #B73838
+#cursor_foreground = #4D2526
 
-foreground = #f5eeeb
+foreground = #F3F4F5
 foreground_bold = #ffffff
-background = #3b3228
+background = #1C2023
 
 # 20% background transparency (requires a compositor)
-#background = rgba(63, 63, 63, 0.8)
+#background = rgba(26, 28, 30, 0.90)
 
 # If unset, will reverse foreground and background
-#highlight = #f4bc87
+#highlight = #2f2f2f
 
 # Colors from color0 to color254 can be set
-color0 = #3b3228
-color8 = #7e705a
-color1 = #cb6077
-color9 = #cb6077
-color2 = #beb55b
-color10 = #beb55b
-color3 = #f4bc87
-color11 = #f4bc87
-color4 = #8ab3b5
-color12 = #8ab3b5
-color5 = #a89bb9
-color13 = #a89bb9
-color6 = #7bbda4
-color14 = #7bbda4
-color7 = #d0c8c6
-color15 = #f5eeeb
+color0 = #1c2023
+color8 = #747c84
+color1 = #c7ae95
+color9 = #c7ae95
+color2 = #95c7ae
+color10 = #95c7ae
+color3 = #aec795
+color11 = #aec795
+color4 = #ae95c7
+color12 = #ae95c7
+color5 = #c795ae
+color13 = #c795ae
+color6 = #95aec7
+color14 = #95aec7
+color7 = #c7ccd1
+color15 = #f3f4f5
 
 [hints]
 #font = Monospace 12

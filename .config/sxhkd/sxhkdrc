@@ -8,11 +8,15 @@ super + Return
 
 # program launcher
 super + @space
-	rofi -show drun -icon-theme "Material-Black-Cherry-Numix" -show-icons
+	rofi -show drun 
 
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
+
+# htop
+ctrl + Escape
+	termite -e htop
 
 #
 # media keys
@@ -28,34 +32,30 @@ XF86AudioLowerVolume
 
 # play/pause
 XF86AudioPlay
-	playerctl --all-players play-pause
+	playerctl --player=playerctld play-pause
+
+# stop
+XF86AudioStop
+        playerctl --all-players stop
 
 # mute
 XF86AudioMute
 	pamixer -t
 
-# sound key
-XF86Tools
-	com.spotify.Client
+# next song
+XF86AudioNext
+	playerctl --player=playerctld next
 
-# home page
-XF86HomePage
+# previous song
+XF86AudioPrev
+        playerctl --player=playerctld previous
+
+# chromium
+super + F9
 	chromium
 
-# calculator
-XF86Calculator
-	galculator
-
-# search
-XF86Search
-	rofi -show drun
-
-# email
-XF86Mail
-	chromium https://mail.google.com/mail/u/0/#inbox
-
-# explorer
-XF86Explorer
+# file manager
+super + F10
 	thunar
 
 # pavucontrol
@@ -68,14 +68,22 @@ ctrl + alt + p
 
 # screenshot
 Print
-	maim ~/Immagini/$(date +%s).png
+	maim -o ~/Immagini/$(date +%s).png && dunstify -I ~/.icons/screenshot.png "Screenshot creato!"
+
+# portion screenshot
+shift + Print
+	maim -o -s ~/Immagini/$(date +%s)-region.png && dunstify -I ~/.icons/screenshot.png "Portion Screenshot preso!"
+
+# active window screenshot
+ctrl + shift + Print
+	maim -o -i $(xdotool getactivewindow) ~/Immagini/$(date +%s)-$(xdotool getactivewindow).png && dunstify -I ~/.icons/screenshot.png "Screenshot finestra preso!"
 
 # quit/restart bspwm
 super + alt + {q,r}
 	bspc {quit,wm -r}
 
 # close and kill
-super + {_,shift + }w
+super + {_,shift + }q
 	bspc node -{c,k}
 
 # alternate between the tiled and monocle layout
