@@ -9,11 +9,11 @@
 rounded = 0
 border_width = 0
 border_sides =
-background_color = #111111 95
+background_color = #111111 100
 border_color = #000000 30
-background_color_hover = #111111 95
+background_color_hover = #111111 100
 border_color_hover = #000000 30
-background_color_pressed = #111111 95
+background_color_pressed = #111111 100
 border_color_pressed = #000000 30
 
 # Background 2: Default task, Iconified task

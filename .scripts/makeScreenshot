@@ -1,0 +1,21 @@
+#!/bin/bash
+
+case $1 in
+    full)
+	# Fullscreen screenshot
+	maim -o ~/Immagini/$(date +%s).png
+  dunstify -I ~/.icons/screenshot.png "Screenshot creato!"
+	;;
+
+    partial)
+  # Partial screenshot
+	maim -o -s ~/Immagini/$(date +%s)-region.png
+  dunstify -I ~/.icons/screenshot.png "Portion Screenshot preso!"
+	;;
+
+    window)
+  # Active window screenshot
+  maim -o -i $(xdotool getactivewindow) ~/Immagini/$(date +%s)-$(xdotool getactivewindow).png
+  dunstify -I ~/.icons/screenshot.png "Screenshot finestra preso!"
+	;;
+esac
