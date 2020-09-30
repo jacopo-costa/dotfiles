@@ -31,21 +31,21 @@ function notify {
         fi
     fi
 
-    ~/.scripts/notify/notify-send.sh -i "$icon_name" -t 2000 -r 123 "$volume "
+    dunstify -i "$icon_name" -t 2000 -r 123 "$volume %"
 }
 
 case $1 in
     up)
 	# Unmute
 	amixer -D pulse set Master on > /dev/null
-	# +5%
+	# +2%
 	amixer -D pulse sset Master 2%+ > /dev/null
 	notify
 	;;
     down)
     # Unmute
 	amixer -D pulse set Master on > /dev/null
-    # -5%
+    # -2%
 	amixer -D pulse sset Master 2%- > /dev/null
 	notify
 	;;
@@ -54,7 +54,7 @@ case $1 in
 	amixer -D pulse set Master 1+ toggle > /dev/null
 	if chkmute ; then
     icon_name="notification-audio-volume-muted"
-    ~/.scripts/notify/notify-send.sh -i "$icon_name" -t 2000 -r 123 "Muted "
+    dunstify -i "$icon_name" -t 2000 -r 123 "Muto "
 	else
 	    notify
 	fi

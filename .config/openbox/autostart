@@ -8,5 +8,6 @@ killall dunst &
 dunst &
 g213-led -a FF2233 &
 nm-applet &
+volumeicon &
 parcellite &
 tint2

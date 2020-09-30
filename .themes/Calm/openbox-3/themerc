@@ -6,7 +6,7 @@
 | `-----'  `--`--' `--'`--`--`--' |
 +---------------------------------+
 
-OpenBox Theme by Gekobix (https://github.com/gekobix)
+OpenBox Theme by Gekobix (https://github.com/Gekobix)
 
 ### Geometry
 
@@ -23,8 +23,8 @@ padding.height: 10
 
 ### Border Colors
 
-window.active.border.color: #E5446A
-window.active.client.color: #E5446A
+window.active.border.color: #242730
+window.active.client.color: #242730
 window.inactive.border.color: #FFFFFF
 window.inactive.client.color: #FFFFFF
 
@@ -47,7 +47,7 @@ window.inactive.button.toggled.unpressed.image.color: #000000
 ### Active Window Textures
 
 window.active.title.bg: solid flat
-window.active.title.bg.color: #E5446A
+window.active.title.bg.color: #242730
 window.active.label.bg: parentrelative
 
 ### Inactive Window Textures
@@ -61,6 +61,7 @@ window.inactive.label.bg: parentrelative
 window.active.button.unpressed.bg: parentrelative
 window.active.button.pressed.bg: parentrelative
 window.active.button.hover.bg: parentrelative
+window.active.button.disabled.bg: parentrelative
 window.active.button.disabled.image.color: #B00000
 window.active.button.hover.image.color: #FFFFFF
 window.active.button.toggled.image.color: #FFFFFF
@@ -76,6 +77,7 @@ window.active.button.close.pressed.image.color: #FFFFFF
 window.inactive.button.unpressed.bg: parentrelative
 window.inactive.button.pressed.bg: parentrelative
 window.inactive.button.hover.bg: parentrelative
+window.inactive.button.disabled.bg: parentrelative
 window.inactive.button.disabled.image.color: #B00000
 window.inactive.button.hover.image.color: #000000
 window.inactive.button.toggled.image.color: #000000
@@ -88,8 +90,8 @@ window.inactive.button.close.pressed.image.color: #000000
 
 ### Menu
 
-menu.border.color: #E5446A
-menu.separator.color: #E5446A
+menu.border.color: #FFFFFF
+menu.separator.color: #FFFFFF
 menu.title.text.color: #FFFFFF
 menu.items.text.color: #FFFFFF
 menu.items.disabled.text.color: #B00000
