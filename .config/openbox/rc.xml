@@ -394,10 +394,13 @@
     </keybind>
 
     <!-- Keybindings for window switching -->
-    <keybind key="A-Tab">
+    <keybind key="W-Tab">
       <action name="Execute">
         <command>rofi -show window</command>
       </action>
+    </keybind>
+    <keybind key="A-Tab">
+      <action name="NextWindow"/>
     </keybind>
 
     <!-- Keybindings for window switching with the arrow keys -->
@@ -432,17 +435,17 @@
     <!-- volume control -->
     <keybind key="XF86AudioRaiseVolume">
       <action name="Execute">
-        <command>bash -c '~/.scripts/notify/change-volume up'</command>
+        <command>bash -c '~/.scripts/change-volume up'</command>
       </action>
     </keybind>
     <keybind key="XF86AudioLowerVolume">
       <action name="Execute">
-        <command>bash -c '~/.scripts/notify/change-volume down'</command>
+        <command>bash -c '~/.scripts/change-volume down'</command>
       </action>
     </keybind>
     <keybind key="XF86AudioMute">
       <action name="Execute">
-        <command>bash -c '~/.scripts/notify/change-volume mute'</command>
+        <command>bash -c '~/.scripts/change-volume mute'</command>
       </action>
     </keybind>
 
@@ -483,7 +486,7 @@
     <!-- Rofi launcher -->
     <keybind key="W-space">
       <action name="Execute">
-        <command>rofi -show drun</command>
+        <command>rofi -show drun -theme "/home/jacopo/.config/rofi/rofi-theme/start-menu.rasi"</command>
       </action>
     </keybind>
 
@@ -509,9 +512,14 @@
     </keybind>
     <keybind key="S-Print">
       <action name="Execute">
-        <command><![CDATA[]]></command>
+        <command>bash -c '~/.scripts/makeScreenshot window'</command>
       </action>
     </keybind>
+  <keybind key="C-S-Print">
+    <action name="Execute">
+      <command>bash -c '~/.scripts/makeScreenshot partial'</command>
+    </action>
+  </keybind>
   </keyboard>
   <mouse>
     <dragThreshold>1</dragThreshold>

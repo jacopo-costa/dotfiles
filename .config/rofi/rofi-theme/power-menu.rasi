@@ -1,0 +1,32 @@
+configuration {
+	modi:                    "window,drun";
+	width:                   5;
+	lines:                   3;
+	columns:                 1;
+	font:                    "CircularStd Medium 12";
+	bw:                      0;
+	location:                5;
+	xoffset:		 						 -10;
+  yoffset:		 						 -50;
+	padding:                 0;
+	show-icons:              true;
+	sidebar-mode:            false;
+  drun-show-actions:       false;
+  fixed-num-lines:         true;
+  eh:                      1;
+  fullscreen:              false;
+  click-to-exit:           true;
+}
+
+#listview {
+    fixed-height: 0;
+    border:       0px 0px 0px ;
+    border-color: @separatorcolor;
+    spacing:      0px ;
+    scrollbar:    false;
+    padding:      0px 0px 4px ;
+}
+
+#inputbar {
+    children:   [];
+}

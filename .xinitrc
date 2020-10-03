@@ -1,7 +1,7 @@
 #!/bin/sh
 
-userresources=$HOME/.config/.Xresources
-usermodmap=$HOME/.config/.Xmodmap
+userresources=$HOME/.Xresources
+usermodmap=$HOME/.Xmodmap
 sysresources=/etc/X11/xinit/.Xresources
 sysmodmap=/etc/X11/xinit/.Xmodmap
 
@@ -51,4 +51,5 @@ fi
 xsetroot -cursor_name left_ptr &
 xset -dpms &
 xset s off &
-exec plasma-session
+redshift -c /home/jacopo/.config/redshift/redshift.conf &
+exec openbox-session

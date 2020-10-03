@@ -15,7 +15,7 @@ case $1 in
 
     window)
   # Active window screenshot
-  maim -o -i $(xdotool getactivewindow) ~/Immagini/$(date +%s)-$(xdotool getactivewindow).png
+  maim -o -i $(xdotool getactivewindow) ~/Immagini/$(date +%s)-$(xdotool getwindowname $(xdotool getactivewindow)).png
   dunstify -I ~/.icons/screenshot.png "Screenshot finestra preso!"
 	;;
 esac

@@ -23,8 +23,8 @@ padding.height: 10
 
 ### Border Colors
 
-window.active.border.color: #242730
-window.active.client.color: #242730
+window.active.border.color: #2B2F38
+window.active.client.color: #2B2F38
 window.inactive.border.color: #FFFFFF
 window.inactive.client.color: #FFFFFF
 
@@ -47,7 +47,7 @@ window.inactive.button.toggled.unpressed.image.color: #000000
 ### Active Window Textures
 
 window.active.title.bg: solid flat
-window.active.title.bg.color: #242730
+window.active.title.bg.color: #2B2F38
 window.active.label.bg: parentrelative
 
 ### Inactive Window Textures
@@ -97,7 +97,7 @@ menu.items.text.color: #FFFFFF
 menu.items.disabled.text.color: #B00000
 menu.items.active.text.color: #000000
 menu.items.bg: solid flat
-menu.items.bg.color: #242730
+menu.items.bg.color: #2B2F38
 menu.items.active.bg: solid flat
 menu.items.active.bg.color: #FFFFFF
 menu.title.bg: parentrelative

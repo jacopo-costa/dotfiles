@@ -10,32 +10,32 @@ rounded = 0
 border_width = 0
 border_sides =
 background_color = #111111 100
-border_color = #000000 30
+border_color = #000000 100
 background_color_hover = #111111 100
-border_color_hover = #000000 30
+border_color_hover = #000000 100
 background_color_pressed = #111111 100
-border_color_pressed = #000000 30
+border_color_pressed = #000000 100
 
 # Background 2: Default task, Iconified task
 rounded = 0
 border_width = 2
 border_sides = B
-background_color = #111111 0
+background_color = #111111 100
 border_color = #FFFFFF 100
-background_color_hover = #444444 20
+background_color_hover = #444444 100
 border_color_hover = #FFFFFF 100
-background_color_pressed = #555555 20
+background_color_pressed = #555555 100
 border_color_pressed = #FFFFFF 100
 
 # Background 3: Active task
 rounded = 0
 border_width = 2
 border_sides = B
-background_color = #222222 80
-border_color = #E5446A 100
-background_color_hover = #444444 20
-border_color_hover = #E5446A 100
-background_color_pressed = #555555 20
+background_color = #222222 100
+border_color = #5294E2 100
+background_color_hover = #444444 100
+border_color_hover = #5294E2 100
+background_color_pressed = #555555 100
 border_color_pressed = #FFFFFF 100
 
 # Background 4: Urgent task
@@ -46,7 +46,7 @@ background_color = #aa4400 100
 border_color = #aa7733 100
 background_color_hover = #cc7700 100
 border_color_hover = #aa7733 100
-background_color_pressed = #555555 4
+background_color_pressed = #555555 100
 border_color_pressed = #aa7733 100
 
 # Background 5: Tooltip
@@ -62,7 +62,7 @@ border_color_pressed = #000000 100
 
 #-------------------------------------
 # Panel
-panel_items = LTSC
+panel_items = P:L:TSCEP
 panel_size = 100% 42
 panel_margin = 0 0
 panel_padding = 4 0 4
@@ -80,7 +80,7 @@ autohide_height = 2
 strut_policy = follow_size
 panel_window_name = tint2
 disable_transparency = 1
-mouse_effects = 1
+mouse_effects = 1separator_background_id = integer
 font_shadow = 0
 mouse_hover_icon_asb = 100 0 10
 mouse_pressed_icon_asb = 100 0 0
@@ -134,7 +134,7 @@ mouse_scroll_down = iconify
 systray_padding = 4 0 4
 systray_background_id = 0
 systray_sort = ascending
-systray_icon_size = 24
+systray_icon_size = 24separator_style =
 systray_icon_asb = 100 0 0
 systray_monitor = 1
 systray_name_filter =
@@ -149,20 +149,58 @@ launcher_icon_asb = 100 0 0
 launcher_icon_theme_override = 0
 startup_notifications = 1
 launcher_tooltip = 1
-launcher_item_app = rofi.desktop
+launcher_item_app = termite.desktop
+launcher_item_app = pcmanfm.desktop
+launcher_item_app = chromium.desktop
 
 #-------------------------------------
 # Clock
 time1_format = %A %d %b | %H:%M
 time1_font = Circular Std Medium 12
 clock_font_color = #FFFFFF 100
-clock_padding = 10 0 10
+clock_padding = 5 0 10
 clock_background_id = 0
 clock_lclick_command =
 clock_rclick_command = orage
 clock_mclick_command =
 clock_uwheel_command =
 clock_dwheel_command =
+
+#-------------------------------------
+# Separator
+separator = 1
+separator_background_id = 1
+separator_color = #ffffff
+separator_style = line
+separator_padding = 5 10
+
+#-------------------------------------
+# Separator
+separator = 2
+separator_background_id = 1
+separator_color = #ffffff
+separator_style = line
+separator_padding = 5 10
+
+#-------------------------------------
+# Start Button
+button = 1
+button_icon = /usr/share/icons/arch.png
+button_tooltip = Start Menu
+button_background_id = 1
+button_centered = 1
+button_padding = 10 10 0
+button_lclick_command = rofi -show drun -theme /home/jacopo/.config/rofi/rofi-theme/start-menu.rasi
+
+#-------------------------------------
+# Power Button
+button = 2
+button_icon = /home/jacopo/.icons/power.png
+button_tooltip = Power Menu
+button_background_id = 1
+button_centered = 1
+button_padding = 10 10 0
+button_lclick_command = sh /home/jacopo/.config/rofi/rofi-menu/powermenu.sh
 
 #-------------------------------------
 # Tooltip
