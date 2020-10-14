@@ -7,7 +7,7 @@
 
 # navigation
 alias ..='cd ..' 
-alias ls='ls --color=auto'
+alias ls='ls -lA --color=auto'
 alias grep='grep --color=auto'
 
 # confirm before overwriting something

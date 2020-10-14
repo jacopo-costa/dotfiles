@@ -46,12 +46,12 @@ hyperlinks = true
 #cursor = #B73838
 #cursor_foreground = #4D2526
 
-foreground = #F3F4F5
+foreground = #ebdbb2
 foreground_bold = #ffffff
-#background = #2B2F38
+background = #282828
 
 # 20% background transparency (requires a compositor)
-background = rgba(43, 47, 56, 0.90)
+#background = rgba(43, 47, 56, 0.90)
 
 # If unset, will reverse foreground and background
 #highlight = #2f2f2f

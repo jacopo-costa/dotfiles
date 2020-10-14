@@ -1,22 +1,8 @@
 configuration {
-	modi:                    "window,drun";
 	width:                   20;
 	lines:                   10;
 	columns:                 1;
-	font:                    "CircularStd Medium 12";
-	bw:                      0;
-  scroll-method:           1;
 	location:                7;
 	xoffset:		 						 10;
   yoffset:		 						 -50;
-	padding:                 10;
-	show-icons:              true;
-	terminal:                "termite";
-	drun-url-launcher:       "chromium";
-	sidebar-mode:            false;
-  drun-show-actions:       false;
-  fixed-num-lines:         true;
-  eh:                      2;
-  fullscreen:              false;
-  click-to-exit:           true;
 }

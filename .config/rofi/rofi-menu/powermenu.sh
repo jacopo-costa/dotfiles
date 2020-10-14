@@ -2,7 +2,6 @@
 
 
 rofi_command="rofi -theme /home/jacopo/.config/rofi/rofi-theme/power-menu.rasi"
-uptime=$(uptime -p | sed -e 's/up //g')
 
 # Options
 shutdown=""
@@ -12,7 +11,7 @@ lock=""
 # Variable passed to rofi
 options="$shutdown\n$reboot\n$lock"
 
-chosen="$(echo -e "$options" | $rofi_command -p "UP - $uptime" -dmenu -selected-row 2)"
+chosen="$(echo -e "$options" | $rofi_command -p "" -dmenu)"
 case $chosen in
     $shutdown)
         shutdown now
@@ -21,6 +20,6 @@ case $chosen in
         reboot
         ;;
     $lock)
-        i3lock-fancy 
+        i3lock-fancy
         ;;
 esac

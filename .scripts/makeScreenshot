@@ -4,18 +4,18 @@ case $1 in
     full)
 	# Fullscreen screenshot
 	maim -o ~/Immagini/$(date +%s).png
-  dunstify -I ~/.icons/screenshot.png "Screenshot creato!"
+  dunstify -I ~/.icons/screenshot.png "Screenshot creato!" -t 3000 -r 321
 	;;
 
     partial)
   # Partial screenshot
 	maim -o -s ~/Immagini/$(date +%s)-region.png
-  dunstify -I ~/.icons/screenshot.png "Portion Screenshot preso!"
+  dunstify -I ~/.icons/screenshot.png "Portion Screenshot preso!" -t 3000 -r 321
 	;;
 
     window)
   # Active window screenshot
   maim -o -i $(xdotool getactivewindow) ~/Immagini/$(date +%s)-$(xdotool getwindowname $(xdotool getactivewindow)).png
-  dunstify -I ~/.icons/screenshot.png "Screenshot finestra preso!"
+  dunstify -I ~/.icons/screenshot.png "Screenshot finestra preso!" -t 3000 -r 321
 	;;
 esac

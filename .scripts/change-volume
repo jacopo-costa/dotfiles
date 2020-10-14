@@ -14,24 +14,24 @@ function notify {
     volume=`cvol`
 
     if [ "$volume" = "0" ]; then
-        icon_name="notification-audio-volume-muted"
+        icon_name="audio-volume-muted-symbolic"
     else
         if [  "$volume" -lt "10" ]; then
-            icon_name="notification-audio-volume-low"
+            icon_name="audio-volume-low-symbolic"
         else
             if [ "$volume" -lt "30" ]; then
-                icon_name="notification-audio-volume-low"
+                icon_name="audio-volume-low-symbolic"
             else
                 if [ "$volume" -lt "70" ]; then
-                    icon_name="notification-audio-volume-medium"
+                    icon_name="audio-volume-medium-symbolic"
                 else
-                    icon_name="notification-audio-volume-high"
+                    icon_name="audio-volume-high-symbolic"
                 fi
             fi
         fi
     fi
 
-    dunstify -i "/home/jacopo/.icons/sound/$icon_name.svg" -t 3000 -r 123 " $volume %"
+    dunstify -i "/home/jacopo/.icons/oomox-xresources/symbolic/status/$icon_name.svg" -t 3000 -r 123 "$volume %"
 }
 
 case $1 in
@@ -53,8 +53,8 @@ case $1 in
     # Toggle mute
 	amixer -D pulse set Master 1+ toggle > /dev/null
 	if chkmute ; then
-    icon_name="notification-audio-volume-muted"
-    dunstify -i "/home/jacopo/.icons/sound/$icon_name.svg" -t 3000 -r 123 " Muto "
+    icon_name="audio-volume-muted-symbolic"
+    dunstify -i "/home/jacopo/.icons/oomox-xresources/symbolic/status/$icon_name.svg" -t 3000 -r 123 "Muto"
 	else
 	    notify
 	fi

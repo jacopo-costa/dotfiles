@@ -6,8 +6,9 @@
 # LX Session
 lxpolkit &
 
-# Desktop
-pcmanfm --desktop &
+# Desktop && File daemon
+(pcmanfm --desktop &) &&
+(pcmanfm -d) &&
 
 # Notifications
 dunst &
@@ -16,11 +17,14 @@ dunst &
 tint2 &
 
 # Applets
-nm-applet &
-volumeicon &
+(nm-applet &) &&
+(volumeicon &) &&
 
 # Keyboard LEDs
-g213-led -a 5294E2 &
+g213-led -a 458588 &
+
+# MiniDLNA
+minidlnad &
 
 # Compose key to the right CTRL
 setxkbmap -option compose:rctrl &
