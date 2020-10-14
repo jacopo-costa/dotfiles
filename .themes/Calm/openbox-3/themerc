@@ -6,15 +6,15 @@
 | `-----'  `--`--' `--'`--`--`--' |
 +---------------------------------+
 
-OpenBox Theme by Gekobix (https://github.com/gekobix)
+OpenBox Theme by Gekobix (https://github.com/Gekobix)
 
 ### Geometry
 
 border.width: 1
 menu.border.width: 1
 menu.separator.width: 1
-menu.separator.padding.width: 5
-menu.separator.padding.height: 5
+menu.separator.padding.width: 0
+menu.separator.padding.height: 0
 window.client.padding.width: 0
 window.client.padding.height: 0
 window.handle.width: 0
@@ -23,37 +23,39 @@ padding.height: 10
 
 ### Border Colors
 
-window.active.border.color: #E5446A
-window.active.client.color: #E5446A
-window.inactive.border.color: #FFFFFF
-window.inactive.client.color: #FFFFFF
+window.active.border.color: #282828
+window.active.client.color: #282828
+window.inactive.border.color: #ebdbb2
+window.inactive.client.color: #ebdbb2
 
 ### Titlebar Colors
 
-window.active.label.text.color: #FFFFFF
-window.active.button.unpressed.image.color: #FFFFFF
-window.active.button.pressed.image.color: #FFFFFF
+window.active.label.text.color: #ebdbb2
+window.active.button.unpressed.image.color: #ebdbb2
+window.active.button.pressed.image.color: #ebdbb2
 window.active.button.disabled.image.color: #B00000
-window.active.button.hover.image.color: #FFFFFF
-window.active.button.toggled.unpressed.image.color: #FFFFFF
+window.active.button.hover.image.color: #458588
+window.active.button.toggled.hover.image.color: #458588
+window.active.button.toggled.unpressed.image.color: #ebdbb2
 
-window.inactive.label.text.color: #000000
-window.inactive.button.unpressed.image.color: #000000
-window.inactive.button.pressed.image.color: #000000
+window.inactive.label.text.color: #282828
+window.inactive.button.unpressed.image.color: #282828
+window.inactive.button.pressed.image.color: #282828
 window.inactive.button.disabled.image.color: #B00000
-window.inactive.button.hover.image.color: #000000
-window.inactive.button.toggled.unpressed.image.color: #000000
+window.inactive.button.hover.image.color: #458588
+window.inactive.button.toggled.hover.image.color: #458588
+window.inactive.button.toggled.unpressed.image.color: #282828
 
 ### Active Window Textures
 
 window.active.title.bg: solid flat
-window.active.title.bg.color: #E5446A
+window.active.title.bg.color: #282828
 window.active.label.bg: parentrelative
 
 ### Inactive Window Textures
 
 window.inactive.title.bg: solid flat
-window.inactive.title.bg.color: #FFFFFF
+window.inactive.title.bg.color: #ebdbb2
 window.inactive.label.bg: parentrelative
 
 ### Active Window Button Textures
@@ -61,45 +63,71 @@ window.inactive.label.bg: parentrelative
 window.active.button.unpressed.bg: parentrelative
 window.active.button.pressed.bg: parentrelative
 window.active.button.hover.bg: parentrelative
+window.active.button.disabled.bg: parentrelative
 window.active.button.disabled.image.color: #B00000
-window.active.button.hover.image.color: #FFFFFF
-window.active.button.toggled.image.color: #FFFFFF
-window.active.button.iconify.unpressed.image.color: #FFFFFF
-window.active.button.max.unpressed.image.color: #FFFFFF
-window.active.button.close.unpressed.image.color: #FFFFFF
-window.active.button.iconify.pressed.image.color: #FFFFFF
-window.active.button.max.pressed.image.color: #FFFFFF
-window.active.button.close.pressed.image.color: #FFFFFF
+window.active.button.hover.image.color: #458588
+window.active.button.toggled.image.color: #ebdbb2
+window.active.button.iconify.unpressed.image.color: #ebdbb2
+window.active.button.max.unpressed.image.color: #ebdbb2
+window.active.button.close.unpressed.image.color: #ebdbb2
+window.active.button.iconify.pressed.image.color: #ebdbb2
+window.active.button.max.pressed.image.color: #ebdbb2
+window.active.button.close.pressed.image.color: #ebdbb2
 
 ### Inactive Window Button Textures
 
 window.inactive.button.unpressed.bg: parentrelative
 window.inactive.button.pressed.bg: parentrelative
 window.inactive.button.hover.bg: parentrelative
+window.inactive.button.disabled.bg: parentrelative
 window.inactive.button.disabled.image.color: #B00000
-window.inactive.button.hover.image.color: #000000
-window.inactive.button.toggled.image.color: #000000
-window.inactive.button.iconify.unpressed.image.color: #000000
-window.inactive.button.max.unpressed.image.color: #000000
-window.inactive.button.close.unpressed.image.color: #000000
-window.inactive.button.iconify.pressed.image.color: #000000
-window.inactive.button.max.pressed.image.color: #000000
-window.inactive.button.close.pressed.image.color: #000000
+window.inactive.button.hover.image.color: #458588
+window.inactive.button.toggled.image.color: #282828
+window.inactive.button.iconify.unpressed.image.color: #282828
+window.inactive.button.max.unpressed.image.color: #282828
+window.inactive.button.close.unpressed.image.color: #282828
+window.inactive.button.iconify.pressed.image.color: #282828
+window.inactive.button.max.pressed.image.color: #282828
+window.inactive.button.close.pressed.image.color: #282828
 
 ### Menu
 
-menu.border.color: #E5446A
-menu.separator.color: #E5446A
-menu.title.text.color: #FFFFFF
-menu.items.text.color: #FFFFFF
+menu.border.color: #ebdbb2
+menu.separator.color: #ebdbb2
+menu.title.text.color: #ebdbb2
+menu.items.text.color: #ebdbb2
 menu.items.disabled.text.color: #B00000
-menu.items.active.text.color: #000000
+menu.items.active.text.color: #282828
 menu.items.bg: solid flat
-menu.items.bg.color: #242730
+menu.items.bg.color: #282828
 menu.items.active.bg: solid flat
-menu.items.active.bg.color: #FFFFFF
+menu.items.active.bg.color: #ebdbb2
 menu.title.bg: parentrelative
 menu.overlap.x: -4
+
+# OSD
+osd.border.width: 2
+osd.border.color: #458588
+
+osd.bg: flat solid
+osd.bg.color: #282828
+osd.label.bg: flat solid
+osd.label.bg.color: #282828
+osd.label.text.color: #ebdbb2
+
+osd.hilight.bg.color: #458588
+osd.unhilight.bg.color: #282828
+
+osd.button.unpressed.bg.color: #282828
+#osd.button.unpressed.*.border.color: #ebdbb2
+
+osd.button.pressed.bg.color: #458588
+#osd.button.pressed.*.border.color: #ebdbb2
+
+osd.button.focused.bg.color: #ebdbb2
+#osd.button.focused.*.border.color: #282828
+
+osd.button.focused.box.color: #458588
 
 ### Text Justification
 

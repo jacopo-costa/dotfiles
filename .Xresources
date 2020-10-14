@@ -1,4 +1,4 @@
-#include "/home/jacopo/.xfiles/themes/mocha"
+#include "/home/jacopo/.xfiles/themes/gruvbox-hard"
 
 *.foreground:  FOREGROUND
 *.background:  BACKGROUND
@@ -20,17 +20,23 @@
 *.color7:      COLOR7
 *.color15:     COLOR15
 
-! === Rofi ===
 
-rofi.modi:                           window,drun
-rofi.width:                          60
-rofi.lines:                          10
-rofi.columns:                        2
-rofi.font:                           Roboto Mono Regular 12
-rofi.bw:                             2
-rofi.location:                       0
-rofi.padding:                        10
-rofi.show-icons:                     true
-rofi.terminal:                       termite
-rofi.icon-theme:                     Orange-Aurora
-rofi.drun-show-actions:              false
+rofi.vars.myforeground:  FOREGROUND
+rofi.vars.mybackground:  BACKGROUND
+rofi.vars.mycursor:      CURSOR
+rofi.vars.mycolor0:      COLOR0
+rofi.vars.mycolor8:      COLOR8
+rofi.vars.mycolor1:      COLOR1
+rofi.vars.mycolor9:      COLOR9
+rofi.vars.mycolor2:      COLOR2
+rofi.vars.mycolor10:     COLOR10
+rofi.vars.mycolor3:      COLOR3
+rofi.vars.mycolor11:     COLOR11
+rofi.vars.mycolor4:      COLOR4
+rofi.vars.mycolor12:     COLOR12
+rofi.vars.mycolor5:      COLOR5
+rofi.vars.mycolor13:     COLOR13
+rofi.vars.mycolor6:      COLOR6
+rofi.vars.mycolor14:     COLOR14
+rofi.vars.mycolor7:      COLOR7
+rofi.vars.mycolor15:     COLOR15

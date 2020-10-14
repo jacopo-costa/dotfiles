@@ -1,0 +1,8 @@
+configuration {
+	width:                   20;
+	lines:                   10;
+	columns:                 1;
+	location:                7;
+	xoffset:		 						 10;
+  yoffset:		 						 -50;
+}

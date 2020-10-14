@@ -1,0 +1,62 @@
+#!/usr/bin/env bash
+
+# Audio volume changer using alsa mixer
+
+function cvol {
+    amixer -D pulse get Master | grep '%' | head -n 1 | awk -F'[' '{print $2}' | awk -F'%' '{print $1}'
+}
+
+function chkmute {
+    amixer -D pulse get Master | grep '%' | grep -oE '[^ ]+$' | grep off
+}
+
+function notify {
+    volume=`cvol`
+
+    if [ "$volume" = "0" ]; then
+        icon_name="audio-volume-muted-symbolic"
+    else
+        if [  "$volume" -lt "10" ]; then
+            icon_name="audio-volume-low-symbolic"
+        else
+            if [ "$volume" -lt "30" ]; then
+                icon_name="audio-volume-low-symbolic"
+            else
+                if [ "$volume" -lt "70" ]; then
+                    icon_name="audio-volume-medium-symbolic"
+                else
+                    icon_name="audio-volume-high-symbolic"
+                fi
+            fi
+        fi
+    fi
+
+    dunstify -i "/home/jacopo/.icons/oomox-xresources/symbolic/status/$icon_name.svg" -t 3000 -r 123 "$volume %"
+}
+
+case $1 in
+    up)
+	# Unmute
+	amixer -D pulse set Master on > /dev/null
+	# +2%
+	amixer -D pulse sset Master 2%+ > /dev/null
+	notify
+	;;
+    down)
+    # Unmute
+	amixer -D pulse set Master on > /dev/null
+    # -2%
+	amixer -D pulse sset Master 2%- > /dev/null
+	notify
+	;;
+    mute)
+    # Toggle mute
+	amixer -D pulse set Master 1+ toggle > /dev/null
+	if chkmute ; then
+    icon_name="audio-volume-muted-symbolic"
+    dunstify -i "/home/jacopo/.icons/oomox-xresources/symbolic/status/$icon_name.svg" -t 3000 -r 123 "Muto"
+	else
+	    notify
+	fi
+	;;
+esac

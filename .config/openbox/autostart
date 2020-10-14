@@ -1,12 +1,31 @@
 # Autostart Apps
 
-setxkbmap -option compose:rctrl &
+# Compositor
+(picom -b --experimental-backends --backend glx --config $HOME/.config/picom/picom.conf &) &&
+
+# LX Session
 lxpolkit &
-pcmanfm --desktop &
-picom -b --experimental-backends --backend glx --config $HOME/.config/picom/picom.conf &
-killall dunst &
+
+# Desktop && File daemon
+(pcmanfm --desktop &) &&
+(pcmanfm -d) &&
+
+# Notifications
 dunst &
-g213-led -a FF2233 &
-nm-applet &
-parcellite &
-tint2
+
+# Bar
+tint2 &
+
+# Applets
+(nm-applet &) &&
+(volumeicon &) &&
+
+# Keyboard LEDs
+g213-led -a 458588 &
+
+# MiniDLNA
+minidlnad &
+
+# Compose key to the right CTRL
+setxkbmap -option compose:rctrl &
+

@@ -3,20 +3,171 @@ configuration {
 	width:                   30;
 	lines:                   8;
 	columns:                 1;
-	font:                    "Roboto Mono Medium 12";
+	font:                    "Cantarell 11";
 	bw:                      0;
 	location:                0;
 	padding:                 10;
 	show-icons:              true;
 	terminal:                "termite";
-  icon-theme:              "Orchis-dark";
 	drun-url-launcher:       "chromium";
+	eh:											 2;
 	sidebar-mode:            false;
-	theme:                   "Arc-Dark.rasi";
   drun-show-actions:       false;
-  fixed-num-lines:         	true;
-  eh:                      2;
+  fixed-num-lines:         true;
   fullscreen:              false;
   click-to-exit:           true;
   window-thumbnail:        true;
+	me-select-entry: "MouseDPrimary";
+	me-accept-entry: "MousePrimary";
 }
+
+* {
+    foreground:                  #ebdbb2;
+    background:                  #282828;
+		primary:                     #458588;
+		red:                         #cc241d;
+    background-color:            rgba ( 0, 0, 0, 0 % );
+		border-color:                @primary;
+    spacing:                     10;
+    separatorcolor:              @background;
+    selected-normal-foreground:  @background;
+		selected-normal-background:  @foreground;
+    selected-active-foreground:  @background;
+    selected-active-background:  @foreground;
+		selected-urgent-foreground:  #BB0000;
+    selected-urgent-background:  rgba ( 165, 66, 66, 100 % );
+    normal-foreground:           @foreground;
+    normal-background:           @background;
+    active-foreground:           @foreground;
+    active-background:           @primary;
+    urgent-foreground:           #FFFFFF;
+    urgent-background:           rgba ( 29, 31, 33, 17 % );
+    alternate-normal-foreground: @foreground;
+    alternate-normal-background: @background;
+    alternate-active-foreground: @active-foreground;
+    alternate-active-background: @active-background;
+    alternate-urgent-foreground: @urgent-foreground;
+    alternate-urgent-background: @background;
+    lightbg:                     rgba ( 238, 232, 213, 100 % );
+    lightfg:                     rgba ( 88, 104, 117, 100 % );
+}
+element {
+    padding: 2px ;
+    spacing: 10px ;
+    border:  0;
+}
+element normal.normal {
+    background-color: var(normal-background);
+    text-color:       var(normal-foreground);
+}
+element normal.urgent {
+    background-color: var(urgent-background);
+    text-color:       var(urgent-foreground);
+}
+element normal.active {
+    background-color: var(active-background);
+    text-color:       var(active-foreground);
+}
+element selected.normal {
+    background-color: var(selected-normal-background);
+    text-color:       var(selected-normal-foreground);
+}
+element selected.urgent {
+    background-color: var(selected-urgent-background);
+    text-color:       var(selected-urgent-foreground);
+}
+element selected.active {
+    background-color: var(selected-active-background);
+    text-color:       var(selected-active-foreground);
+}
+element alternate.normal {
+    background-color: var(alternate-normal-background);
+    text-color:       var(alternate-normal-foreground);
+}
+element alternate.urgent {
+    background-color: var(alternate-urgent-background);
+    text-color:       var(alternate-urgent-foreground);
+}
+element alternate.active {
+    background-color: var(alternate-active-background);
+    text-color:       var(alternate-active-foreground);
+}
+element-text {
+    horizontal-align: 0;
+    vertical-align: 0.5;
+}
+element-icon {
+    background-color: rgba ( 0, 0, 0, 0 % );
+    size:             32px ;
+    text-color:       inherit;
+}
+window {
+    padding:          10;
+    background-color: var(background);
+    border:           2;
+}
+mainbox {
+    padding: 0;
+    border:  0;
+}
+message {
+    padding: 0px ;
+    border:  2px 0px 0px ;
+}
+textbox {
+    vertical-align: 1;
+    text-color:     var(foreground);
+}
+listview {
+    padding:      2px 0px 0px ;
+    scrollbar:    true;
+    border-color: var(separatorcolor);
+    spacing:      10px ;
+    fixed-height: 0;
+    border:       0px ;
+}
+scrollbar {
+    width:        4px ;
+    padding:      0;
+    handle-width: 8px ;
+    border:       0;
+    handle-color: var(normal-foreground);
+}
+mode-switcher {
+    border-color: var(separatorcolor);
+    border:       2px 0px 0px ;
+}
+button {
+    spacing:    0;
+    text-color: var(normal-foreground);
+}
+button selected {
+    background-color: var(selected-normal-background);
+    text-color:       var(selected-normal-foreground);
+}
+inputbar {
+    padding:    2px ;
+    spacing:    0;
+    text-color: var(normal-foreground);
+    children:   [ entry,case-indicator ];
+}
+case-indicator {
+    spacing:    0;
+    text-color: var(normal-foreground);
+}
+entry {
+    spacing:    0;
+    text-color: var(normal-foreground);
+}
+prompt {
+    spacing:    0;
+    text-color: var(normal-foreground);
+}
+textbox-prompt-colon {
+    margin:     0px 0.3000em 0.0000em 0.0000em ;
+    expand:     false;
+    str:        ":";
+    text-color: var(normal-foreground);
+}
+
+@import "/home/jacopo/.config/rofi/colors.rasi"

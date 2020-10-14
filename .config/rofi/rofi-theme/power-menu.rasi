@@ -1,0 +1,27 @@
+configuration {
+	width:                   5;
+	lines:                   3;
+	columns:                 1;
+	location:                5;
+	xoffset:		 						 -10;
+  yoffset:		 						 -50;
+}
+
+element {
+    padding: 5px ;
+    spacing: 0px ;
+    border:  0;
+}
+
+element-icon {
+    size:             24px ;
+}
+
+mainbox {
+		children: [listview];
+}
+
+listview {
+    spacing:      2px ;
+    scrollbar:    false;
+}
