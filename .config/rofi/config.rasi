@@ -21,11 +21,13 @@ configuration {
 	me-accept-entry: "MousePrimary";
 }
 
+@import "/home/jacopo/.config/rofi/colors.rasi"
+
 * {
-    foreground:                  #ebdbb2;
-    background:                  #282828;
-		primary:                     #458588;
-		red:                         #cc241d;
+    foreground:                  @xfg;
+    background:                  @xbg;
+		primary:                     @x4;
+		red:                         @x1;
     background-color:            rgba ( 0, 0, 0, 0 % );
 		border-color:                @primary;
     spacing:                     10;
@@ -34,7 +36,7 @@ configuration {
 		selected-normal-background:  @foreground;
     selected-active-foreground:  @background;
     selected-active-background:  @foreground;
-		selected-urgent-foreground:  #BB0000;
+		selected-urgent-foreground:  @red;
     selected-urgent-background:  rgba ( 165, 66, 66, 100 % );
     normal-foreground:           @foreground;
     normal-background:           @background;
@@ -107,6 +109,7 @@ window {
     border:           2;
 }
 mainbox {
+		children:           [ inputbar, listview ];
     padding: 0;
     border:  0;
 }
@@ -116,6 +119,7 @@ message {
 }
 textbox {
     vertical-align: 1;
+		content:				"";
     text-color:     var(foreground);
 }
 listview {
@@ -132,10 +136,6 @@ scrollbar {
     handle-width: 8px ;
     border:       0;
     handle-color: var(normal-foreground);
-}
-mode-switcher {
-    border-color: var(separatorcolor);
-    border:       2px 0px 0px ;
 }
 button {
     spacing:    0;
@@ -160,14 +160,7 @@ entry {
     text-color: var(normal-foreground);
 }
 prompt {
+		enabled:    true;
     spacing:    0;
     text-color: var(normal-foreground);
 }
-textbox-prompt-colon {
-    margin:     0px 0.3000em 0.0000em 0.0000em ;
-    expand:     false;
-    str:        ":";
-    text-color: var(normal-foreground);
-}
-
-@import "/home/jacopo/.config/rofi/colors.rasi"

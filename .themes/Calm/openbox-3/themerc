@@ -109,25 +109,26 @@ menu.overlap.x: -4
 osd.border.width: 2
 osd.border.color: #458588
 
-osd.bg: flat solid
 osd.bg.color: #282828
-osd.label.bg: flat solid
 osd.label.bg.color: #282828
 osd.label.text.color: #ebdbb2
+osd.bg.shadow: 0
 
-osd.hilight.bg.color: #458588
+osd.hilight.bg: Solid Flat
+osd.hilight.bg.color: #ebdbb2
+osd.unhilight.bg: flat solid
 osd.unhilight.bg.color: #282828
 
+osd.button.unpressed.bg: flat solid
 osd.button.unpressed.bg.color: #282828
-#osd.button.unpressed.*.border.color: #ebdbb2
 
+osd.button.pressed.bg: flat border
 osd.button.pressed.bg.color: #458588
-#osd.button.pressed.*.border.color: #ebdbb2
 
-osd.button.focused.bg.color: #ebdbb2
-#osd.button.focused.*.border.color: #282828
+osd.button.focused.bg: flat solid
+osd.button.focused.bg.color: #282828
 
-osd.button.focused.box.color: #458588
+osd.button.focused.box.color: #ebdbb2
 
 ### Text Justification
 

@@ -7,8 +7,7 @@
 lxpolkit &
 
 # Desktop && File daemon
-(pcmanfm --desktop &) &&
-(pcmanfm -d) &&
+(pcmanfm --desktop && sleep 2 && pcmanfm -d) &
 
 # Notifications
 dunst &
@@ -17,8 +16,7 @@ dunst &
 tint2 &
 
 # Applets
-(nm-applet &) &&
-(volumeicon &) &&
+(nm-applet &) && sleep 2 && (volumeicon &)
 
 # Keyboard LEDs
 g213-led -a 458588 &
@@ -28,4 +26,3 @@ minidlnad &
 
 # Compose key to the right CTRL
 setxkbmap -option compose:rctrl &
-

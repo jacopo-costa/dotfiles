@@ -19,10 +19,10 @@ function notify {
         if [  "$volume" -lt "10" ]; then
             icon_name="audio-volume-low-symbolic"
         else
-            if [ "$volume" -lt "30" ]; then
+            if [ "$volume" -lt "34" ]; then
                 icon_name="audio-volume-low-symbolic"
             else
-                if [ "$volume" -lt "70" ]; then
+                if [ "$volume" -lt "85" ]; then
                     icon_name="audio-volume-medium-symbolic"
                 else
                     icon_name="audio-volume-high-symbolic"
