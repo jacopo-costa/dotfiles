@@ -10,7 +10,7 @@ OpenBox Theme by Gekobix (https://github.com/Gekobix)
 
 ### Geometry
 
-border.width: 1
+border.width: 0
 menu.border.width: 1
 menu.separator.width: 1
 menu.separator.padding.width: 0
@@ -19,7 +19,7 @@ window.client.padding.width: 0
 window.client.padding.height: 0
 window.handle.width: 0
 padding.width: 10
-padding.height: 10
+padding.height: 8
 
 ### Border Colors
 
