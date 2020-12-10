@@ -29,7 +29,7 @@
     # the top and down respectively.
     # The width can be negative.  In this case the actual width is the
     # screen width minus the width defined in within the geometry option.
-    geometry = "0x10-40+40"
+    geometry = "0x10-50+50"
 
     # Show how many messages are currently hidden (because of geometry).
     indicate_hidden = yes
@@ -86,7 +86,7 @@
 
     ### Text ###
 
-    font = Circular Std Medium 12
+    font = Cantarell Bold 12
 
     # The spacing between lines.  If the height is smaller than the
     # font height, it will get raised to the font height.
@@ -169,7 +169,7 @@
     max_icon_size = 64
 
     # Paths to default icons.
-    #icon_path = /home/jacopo/.icons/Tela-dark/16@2x/status/:/home/jacopo/.icons/Tela-dark/16@2x/devices/
+    # icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
 
     ### History ###
 

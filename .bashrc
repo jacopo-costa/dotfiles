@@ -5,6 +5,15 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# Source bash-completion
+source /usr/share/bash-completion/bash_completion
+
+# Source command-not-found
+source /usr/share/doc/pkgfile/command-not-found.bash
+
+# Pretend cd when only path
+shopt -s autocd
+
 # navigation
 alias ..='cd ..' 
 alias ls='ls -lA --color=auto'
@@ -40,6 +49,9 @@ alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/mas
 
 # updates
 alias yayf='yay && flatpak update'
+
+# youtube-dl
+alias ydl='youtube-dl'
 
 PS1="\n\[\e[32m\]\w\[\e[m\] \n> "
 

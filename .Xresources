@@ -19,24 +19,3 @@
 *.color14:     COLOR14
 *.color7:      COLOR7
 *.color15:     COLOR15
-
-
-rofi.vars.myforeground:  FOREGROUND
-rofi.vars.mybackground:  BACKGROUND
-rofi.vars.mycursor:      CURSOR
-rofi.vars.mycolor0:      COLOR0
-rofi.vars.mycolor8:      COLOR8
-rofi.vars.mycolor1:      COLOR1
-rofi.vars.mycolor9:      COLOR9
-rofi.vars.mycolor2:      COLOR2
-rofi.vars.mycolor10:     COLOR10
-rofi.vars.mycolor3:      COLOR3
-rofi.vars.mycolor11:     COLOR11
-rofi.vars.mycolor4:      COLOR4
-rofi.vars.mycolor12:     COLOR12
-rofi.vars.mycolor5:      COLOR5
-rofi.vars.mycolor13:     COLOR13
-rofi.vars.mycolor6:      COLOR6
-rofi.vars.mycolor14:     COLOR14
-rofi.vars.mycolor7:      COLOR7
-rofi.vars.mycolor15:     COLOR15

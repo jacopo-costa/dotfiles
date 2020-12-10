@@ -21,7 +21,7 @@ configuration {
 	me-accept-entry: "MousePrimary";
 }
 
-@import "/home/jacopo/.config/rofi/colors.rasi"
+@import "~/.config/rofi/colors.rasi"
 
 * {
     foreground:                  @xfg;

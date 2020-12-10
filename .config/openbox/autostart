@@ -16,13 +16,16 @@ dunst &
 tint2 &
 
 # Applets
-(nm-applet &) && sleep 2 && (volumeicon &)
+(nm-applet &) && sleep 2 && (volumeicon &) && sleep 2 && (parcellite &)
 
 # Keyboard LEDs
 g213-led -a 458588 &
 
 # MiniDLNA
-minidlnad &
+#minidlnad &
 
 # Compose key to the right CTRL
 setxkbmap -option compose:rctrl &
+
+# VNC
+x0vncserver -rfbauth ~/.vnc/passwd
