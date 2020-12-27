@@ -3,8 +3,8 @@
 # Compositor
 (picom -b --experimental-backends --backend glx --config $HOME/.config/picom/picom.conf &) &&
 
-# LX Session
-lxpolkit &
+# Gnome Polkit
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
 # Desktop && File daemon
 (pcmanfm --desktop && sleep 2 && pcmanfm -d) &
@@ -16,16 +16,15 @@ dunst &
 tint2 &
 
 # Applets
-(nm-applet &) && sleep 2 && (volumeicon &) && sleep 2 && (parcellite &)
+nm-applet &
+(sleep 1 && volumeicon) &
+(sleep 2 && parcellite) &
 
 # Keyboard LEDs
-g213-led -a 458588 &
-
-# MiniDLNA
-#minidlnad &
+g213-led -a 95AEC7 &
 
 # Compose key to the right CTRL
-setxkbmap -option compose:rctrl &
+setxkbmap -option compose:ralt &
 
 # VNC
 x0vncserver -rfbauth ~/.vnc/passwd

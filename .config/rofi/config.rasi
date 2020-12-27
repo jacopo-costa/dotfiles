@@ -26,7 +26,7 @@ configuration {
 * {
     foreground:                  @xfg;
     background:                  @xbg;
-		primary:                     @x4;
+		primary:                     @x6;
 		red:                         @x1;
     background-color:            rgba ( 0, 0, 0, 0 % );
 		border-color:                @primary;

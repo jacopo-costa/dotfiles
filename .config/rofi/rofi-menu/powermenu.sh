@@ -4,7 +4,7 @@
 rofi_command="rofi -theme ~/.config/rofi/rofi-theme/power-menu.rasi"
 
 # Options
-shutdown=""
+shutdown="⏻"
 reboot=""
 lock=""
 

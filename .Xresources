@@ -1,4 +1,4 @@
-#include "/home/jacopo/.xfiles/themes/gruvbox-hard"
+#include "/home/jacopo/.xfiles/themes/ashes"
 
 *.foreground:  FOREGROUND
 *.background:  BACKGROUND
