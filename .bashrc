@@ -6,7 +6,7 @@
 [[ $- != *i* ]] && return
 
 # Source bash-completion
-source /usr/share/bash-completion/bash_completion
+[ -r /usr/share/bash-completion/bash_completion   ] && . /usr/share/bash-completion/bash_completion
 
 # Source command-not-found
 source /usr/share/doc/pkgfile/command-not-found.bash

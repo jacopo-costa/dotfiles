@@ -17,8 +17,8 @@ tint2 &
 
 # Applets
 nm-applet &
-(sleep 1 && volumeicon) &
-(sleep 2 && parcellite) &
+volumeicon &
+(sleep 1 && parcellite) &
 
 # Keyboard LEDs
 g213-led -a 95AEC7 &

@@ -466,7 +466,7 @@
       </action>
     </keybind>
     <!-- Keybindings for other things -->
-    <keybind key="W-F10">
+    <keybind key="W-e">
       <action name="Execute">
         <command>pcmanfm</command>
       </action>
