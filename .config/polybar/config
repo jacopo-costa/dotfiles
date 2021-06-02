@@ -18,15 +18,14 @@
 
 [colors]
 background = ${xrdb:background}
-background-alt = ${xrdb:color8}
+background-alt = ${xrdb:color0}
 foreground = ${xrdb:foreground}
 foreground-alt = ${xrdb:color7}
-primary = ${xrdb:color4}
-secondary = ${xrdb:color5}
+primary = ${xrdb:color12}
+secondary = ${xrdb:color4}
 alert = #BB0000
 
 [bar/simplebar]
-#monitor = ${env:MONITOR:HDMI-0}
 width = 100%
 height = 26
 ;offset-x = 1%
@@ -51,7 +50,7 @@ padding-right = 0
 module-margin-left = 1
 module-margin-right = 1
 
-font-0 = Roboto Mono:style=Medium:pixelsize=10;1
+font-0 = JetBrains Mono:style=Medium:pixelsize=10;1
 font-1 = unifont:style=truetype:size=10:antialias=false;1
 font-2 = Font Awesome 5 Free:style=Regular:size=10;1
 font-3 = Font Awesome 5 Free:style=Solid:size=10;1
@@ -59,7 +58,7 @@ font-4 = Font Awesome 5 Brands:style=Regular:size=10;1
 
 modules-left = xwindow
 modules-center = bspwm
-modules-right = eth pulse date powermenu
+modules-right = xkeyboard eth pulseaudio date powermenu
 
 tray-position = left
 tray-padding = 2
@@ -124,18 +123,21 @@ time-alt = %H:%M:%S
 
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
-#format-underline = #0a6cf5
 
 label = %date% %time%
 
-[module/pulse]
-type = custom/script
-interval = 60
+[module/pulseaudio]
+type = internal/pulseaudio
+use-ui-max = false
+interval = 2
 
-exec = vol-listener
+format-volume = <ramp-volume> <label-volume>
+label-muted =  Muto
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
 
-click-right = exec change-volume mute
-click-left = exec pavucontrol
+click-right = pavucontrol
 
 [module/powermenu]
 type = custom/menu
@@ -159,6 +161,20 @@ menu-0-0 = Riavvia
 menu-0-0-exec = reboot
 menu-0-1 = "Spegni "
 menu-0-1-exec = shutdown now
+
+[module/xkeyboard]
+type = internal/xkeyboard
+
+format = <label-indicator>
+format-foreground = ${colors.foreground}
+format-background = ${colors.primary}
+
+label-indicator-on-capslock = "  "
+label-indicator-off-capslock = 
+label-indicator-on-numlock = "  "
+label-indicator-off-numlock = 
+label-indicator-on-scrolllock = "  "
+label-indicator-off-scrolllock = 
 
 [settings]
 screenchange-reload = true

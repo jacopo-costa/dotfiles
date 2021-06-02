@@ -6,10 +6,10 @@ bold_is_bright = true
 #cell_width_scale = 1.0
 clickable_url = true
 dynamic_title = true
-font = Roboto Mono 12
+font = JetBrains Mono 12
 #fullscreen = true
 icon_name = terminal
-#mouse_autohide = false
+mouse_autohide = true
 #scroll_on_output = false
 #scroll_on_keystroke = true
 # Length of the scrollback buffer, 0 disabled the scrollback buffer
@@ -46,9 +46,9 @@ cursor_shape = ibeam
 #cursor = #B73838
 #cursor_foreground = #4D2526
 
-foreground = #F3F4F5
-foreground_bold = #ffffff
-background = #1C2023
+foreground = #FFFFFF
+foreground_bold = #FFFFFF
+background = #000000
 
 # 20% background transparency (requires a compositor)
 #background = rgba(43, 47, 56, 0.90)
@@ -57,22 +57,22 @@ background = #1C2023
 #highlight = #2f2f2f
 
 # Colors from color0 to color254 can be set
-color0 = #1C2023
-color8 = #747C84
-color1 = #C7AE95
-color9 = #C7AE95
-color2 = #95C7AE
-color10 = #95C7AE
-color3 = #AEC795
-color11 = #AEC795
-color4 = #AE95C7
-color12 = #AE95C7
-color5 = #C795AE
-color13 = #C795AE
-color6 = #95AEC7
-color14 = #95AEC7
-color7 = #C7CCD1
-color15 = #F3F4F5
+color0 = #101010
+color8 = #404040
+color1 = #E84F4F
+color9 = #D23D3D
+color2 = #B8D68C
+color10 = #A0CF5D
+color3 = #E1AA5D
+color11 = #F39D21
+color4 = #7DC1CF
+color12 = #4E9FB1
+color5 = #9B64FB
+color13 = #8542FF
+color6 = #6D878D
+color14 = #42717B
+color7 = #DDDDDD
+color15 = #DDDDDD
 
 [hints]
 #font = Monospace 12

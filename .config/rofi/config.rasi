@@ -12,11 +12,11 @@ configuration {
 	drun-url-launcher:       "chromium";
 	eh:											 2;
 	sidebar-mode:            false;
-  drun-show-actions:       false;
-  fixed-num-lines:         true;
-  fullscreen:              false;
-  click-to-exit:           true;
-  window-thumbnail:        true;
+	drun-show-actions:       false;
+	fixed-num-lines:         true;
+	fullscreen:              false;
+	click-to-exit:           true;
+	window-thumbnail:        true;
 	me-select-entry: "MouseDPrimary";
 	me-accept-entry: "MousePrimary";
 }
@@ -26,17 +26,17 @@ configuration {
 * {
     foreground:                  @xfg;
     background:                  @xbg;
-		primary:                     @x6;
-		red:                         @x1;
+    primary:                     @x12;
+    red:                         @x1;
     background-color:            rgba ( 0, 0, 0, 0 % );
-		border-color:                @primary;
+    border-color:                @primary;
     spacing:                     10;
     separatorcolor:              @background;
     selected-normal-foreground:  @background;
-		selected-normal-background:  @foreground;
+    selected-normal-background:  @foreground;
     selected-active-foreground:  @background;
     selected-active-background:  @foreground;
-		selected-urgent-foreground:  @red;
+    selected-urgent-foreground:  @red;
     selected-urgent-background:  rgba ( 165, 66, 66, 100 % );
     normal-foreground:           @foreground;
     normal-background:           @background;

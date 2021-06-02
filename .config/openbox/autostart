@@ -7,7 +7,8 @@
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
 # Desktop && File daemon
-(pcmanfm --desktop && sleep 2 && pcmanfm -d) &
+feh --bg-scale /home/jacopo/Immagini/Sfondi/wallhaven-72g8wo.jpg &
+#(pcmanfm --desktop && sleep 2 && pcmanfm -d) &
 
 # Notifications
 dunst &
@@ -18,10 +19,7 @@ tint2 &
 # Applets
 nm-applet &
 volumeicon &
-(sleep 1 && parcellite) &
-
-# Keyboard LEDs
-g213-led -a 95AEC7 &
+(sleep 3s && parcellite) &
 
 # Compose key to the right CTRL
 setxkbmap -option compose:ralt &

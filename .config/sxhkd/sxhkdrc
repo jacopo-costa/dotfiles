@@ -52,11 +52,11 @@ XF86AudioPrev
 
 # chromium
 super + F9
-	chromium
+	google-chrome-stable
 
 # file manager
 super + F10
-	pcmanfm
+	thunar
 
 # pavucontrol
 ctrl + alt + p
