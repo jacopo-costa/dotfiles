@@ -3,7 +3,7 @@
 sxhkd &
 setxkbmap -option compose:ralt &
 
-bspc monitor HDMI-0 -d 1 2 3 4
+bspc monitor -d 1 2 3 4
 
 bspc config border_width         	2
 bspc config window_gap          	15
@@ -16,21 +16,12 @@ bspc config borderless_monocle   	true
 bspc config gapless_monocle      	true
 bspc config focus_follows_pointer	true
 
-bspc rule -a Chromium desktop='^1'
 bspc rule -a Pavucontrol state=floating
-bspc rule -a Spotify desktop='^3'
-bspc rule -a Lutris desktop='^5'
-bspc rule -a Steam desktop='^5'
-bspc rule -a discord desktop='^4'
-bspc rule -a TelegramDesktop desktop='^4'
-bspc rule -a Galculator state=floating
-bspc rule -a Gimp-2.10 desktop='^5' follow=off
 
 ## Autostart programs ##
 
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
-feh --bg-scale /home/jacopo/Immagini/Sfondi/wallhaven-72g8wo.jpg &
-picom -b --experimental-backends --backend glx --config $HOME/.config/picom/picom.conf &
+feh --bg-scale /home/jacopo/Immagini/Sfondi/wallhaven-8okmwj.jpg &
+picom -b --config $HOME/.config/picom/picom.conf &
 dunst &
 $HOME/.config/polybar/launch.sh &
-wmname LG3D &

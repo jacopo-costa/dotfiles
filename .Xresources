@@ -1,21 +1,36 @@
-#include "/home/jacopo/.xfiles/themes/ashes"
+! special
+*.foreground:   #ffffff
+*.background:   #000000
+*.cursorColor:  #ffffff
 
-*.foreground:  FOREGROUND
-*.background:  BACKGROUND
-*.cursorColor: CURSOR
-*.color0:      COLOR0
-*.color8:      COLOR8
-*.color1:      COLOR1
-*.color9:      COLOR9
-*.color2:      COLOR2
-*.color10:     COLOR10
-*.color3:      COLOR3
-*.color11:     COLOR11
-*.color4:      COLOR4
-*.color12:     COLOR12
-*.color5:      COLOR5
-*.color13:     COLOR13
-*.color6:      COLOR6
-*.color14:     COLOR14
-*.color7:      COLOR7
-*.color15:     COLOR15
+! black
+*.color0:       #101010
+*.color8:       #404040
+
+! red
+*.color1:       #e84f4f
+*.color9:       #d23d3d
+
+! green
+*.color2:       #b8d68c
+*.color10:      #a0cf5d
+
+! yellow
+*.color3:       #e1aa5d
+*.color11:      #f39d21
+
+! blue
+*.color4:       #7dc1cf
+*.color12:      #4e9fb1
+
+! magenta
+*.color5:       #9b64fb
+*.color13:      #8542ff
+
+! cyan
+*.color6:       #6d878d
+*.color14:      #42717b
+
+! white
+*.color7:       #dddddd
+*.color15:      #dddddd

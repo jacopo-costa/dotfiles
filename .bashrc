@@ -15,7 +15,7 @@ source /usr/share/doc/pkgfile/command-not-found.bash
 shopt -s autocd
 
 # navigation
-alias ..='cd ..' 
+alias ..='cd ..'
 alias ls='ls -lA --color=auto'
 alias grep='grep --color=auto'
 
@@ -41,18 +41,12 @@ alias status='git status'
 alias ssn="sudo shutdown now"
 alias sr="sudo reboot"
 
-# merge Xresources
-alias merge='xrdb -merge ~/.Xresources'
-
 # the terminal rickroll
 alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
-
-# updates
-alias yayf='yay && flatpak update'
 
 # youtube-dl
 alias ydl='youtube-dl'
 
 PS1="\n\[\e[32m\]\w\[\e[m\] \n> "
 
-pfetch | lolcat
+pfetch

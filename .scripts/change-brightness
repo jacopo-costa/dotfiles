@@ -10,44 +10,40 @@ function notify {
     brightness=`cbright`
     
     if [ "$brightness" = "0" ]; then
-        icon_name="notification-display-brightness-off"
+        icon_name="display-brightness-off-symbolic"
     else    
-        if [  "$brightness" -lt "10" ]; then
-            icon_name="notification-display-brightness-low"
+        if [  "$brightness" -lt "30" ]; then
+            icon_name="display-brightness-low-symbolic"
         else
-            if [ "$brightness" -lt "30" ]; then
-                icon_name="notification-display-brightness-medium"
+            if [ "$brightness" -lt "70" ]; then
+                  icon_name="display-brightness-medium-symbolic"
             else
-                if [ "$brightness" -lt "70" ]; then
-                    icon_name="notification-display-brightness-medium"
+                if [ "$brightness" -lt "100" ]; then
+                     icon_name="display-brightness-high-symbolic"
                 else
-                    if [ "$brightness" -lt "100" ]; then
-                        icon_name="notification-display-brightness-high"
-                    else
-                        icon_name="notification-display-brightness-full"
-                    fi
+                      icon_name="display-brightness-high-symbolic"
                 fi
             fi
         fi
     fi
 
-    ~/.scripts/notify/notify-send.sh -i "$icon_name" -t 2000 -r 1234 "$brightness "
+    dunstify -i "/home/jacopo/.icons/oomox-xresources/symbolic/status/$icon_name.svg" -t 3000 -r 123 "$brightness %"
 }
 
 case $1 in
     up)
-	# +5%
-	brightnessctl set 5%+ > /dev/null
+	# +2%
+	brightnessctl set 2%+ > /dev/null
 	notify
 	;;
     down)
-    # -5%
-    brightnessctl set 5%- > /dev/null
+    	# -2%
+    	brightnessctl set 2%- > /dev/null
 	notify
 	;;
     optimal)
-    # Toggle optimal
+    	# Toggle optimal
 	brightnessctl set 25% > /dev/null
-    notify
+    	notify
 	;;
 esac    

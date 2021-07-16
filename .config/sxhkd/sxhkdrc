@@ -4,11 +4,11 @@
 
 # terminal emulator
 super + Return
-	termite
+	kitty
 
 # program launcher
 super + @space
-	rofi -show drun 
+	dmenu_run -i -p 'Cerca:' -l 5 -fn 'JetBrains Mono:pixelsize=15' -nb '#000000' -nf '#FFFFFF' -sb '#4E9FB1' -sf '#000000'
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -16,7 +16,7 @@ super + Escape
 
 # htop
 ctrl + Escape
-	termite -e htop
+	kitty -e htop
 
 #
 # media keys
@@ -30,6 +30,14 @@ XF86AudioRaiseVolume
 XF86AudioLowerVolume
 	change-volume down
 
+# raise brightness
+XF86MonBrightnessUp
+	change-brightness up
+
+# lower brightness
+XF86MonBrightnessDown
+	change-brightness down
+
 # play/pause
 XF86AudioPlay
 	playerctl --player=playerctld play-pause
@@ -42,6 +50,10 @@ XF86AudioStop
 XF86AudioMute
 	change-volume mute
 
+# mute mic
+XF86AudioMicMute
+	change-volume mutemic
+
 # next song
 XF86AudioNext
 	playerctl --player=playerctld next
@@ -50,12 +62,16 @@ XF86AudioNext
 XF86AudioPrev
         playerctl --player=playerctld previous
 
-# chromium
-super + F9
+# dmenu
+XF86Search
+	dmenu_run -i -p 'Cerca:' -l 5 -fn 'JetBrains Mono:pixelsize=15' -nb '#000000' -nf '#FFFFFF' -sb '#4E9FB1' -sf '#000000'
+
+# Chrome
+super + g
 	google-chrome-stable
 
 # file manager
-super + F10
+super + e
 	thunar
 
 # pavucontrol

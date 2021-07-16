@@ -53,10 +53,20 @@ case $1 in
     # Toggle mute
 	amixer -D pulse set Master 1+ toggle > /dev/null
 	if chkmute ; then
-    icon_name="audio-volume-muted-symbolic"
-    dunstify -i "/home/jacopo/.icons/oomox-xresources/symbolic/status/$icon_name.svg" -t 3000 -r 123 "Muto"
+    	icon_name="audio-volume-muted-symbolic"
+    	dunstify -i "/home/jacopo/.icons/oomox-xresources/symbolic/status/$icon_name.svg" -t 3000 -r 123 "Muto"
 	else
 	    notify
+	fi
+	;;
+    mutemic)
+    # Toggle mute microphone
+	amixer set Capture toggle > /dev/null
+	if amixer -D pulse get Capture | grep '%' | grep -oE '[^ ]+$' | grep off ; then
+    	icon_name="microphone-sensitivity-none-symbolic"
+    	dunstify -i "/home/jacopo/.icons/oomox-xresources/symbolic/status/$icon_name.svg" -t 3000 -r 123 "Muto"
+	else
+		dunstify -i "/home/jacopo/.icons/oomox-xresources/symbolic/status/microphone-sensitivity-high-symbolic.svg" -t 3000 -r 123 "Acceso"
 	fi
 	;;
 esac
