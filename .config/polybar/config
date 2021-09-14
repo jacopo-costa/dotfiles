@@ -133,7 +133,7 @@ full-at = 99
 battery = BAT0
 adapter = AC
 
-poll-interval = 0
+poll-interval = 5
 
 format-charging = <label-charging>
 format-discharging = <ramp-capacity> <label-discharging>

@@ -21,7 +21,7 @@ bspc rule -a Pavucontrol state=floating
 ## Autostart programs ##
 
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
-feh --bg-scale /home/jacopo/Immagini/Sfondi/wallhaven-8okmwj.jpg &
+feh --bg-scale --no-fehbg /home/jacopo/Immagini/Sfondi/wallhaven-8okmwj.jpg &
 picom -b --config $HOME/.config/picom/picom.conf &
 dunst &
 $HOME/.config/polybar/launch.sh &

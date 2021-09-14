@@ -1,0 +1,3 @@
+xsetroot -cursor_name left_ptr &
+redshift -c /home/jacopo/.config/redshift/redshift.conf &
+exec bspwm
