@@ -4,7 +4,7 @@
 	<icon>utilities-terminal</icon>
 	<name>Apri un terminale qui</name>
 	<unique-id>1626424813456330-1</unique-id>
-	<command>exo-open --working-directory %f --launch TerminalEmulator</command>
+	<command>kitty</command>
 	<description>Esempio di azione personalizzata</description>
 	<patterns>*</patterns>
 	<startup-notify/>

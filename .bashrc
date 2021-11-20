@@ -8,15 +8,25 @@
 # Source bash-completion
 [ -r /usr/share/bash-completion/bash_completion   ] && . /usr/share/bash-completion/bash_completion
 
+# Import colorscheme from 'wal' asynchronously
+# &   # Run the process in the background.
+# ( ) # Hide shell job control messages.
+# Not supported in the "fish" shell.
+(cat ~/.cache/wal/sequences &)
+
 # Source command-not-found
 source /usr/share/doc/pkgfile/command-not-found.bash
 
 # Pretend cd when only path
 shopt -s autocd
 
+# Plex
+alias startplex='sudo systemctl start plexmediaserver.service'
+alias stopplex='sudo systemctl stop plexmediaserver.service'
+
 # navigation
 alias ..='cd ..'
-alias ls='ls -lA --color=auto'
+alias ls='ls -lAh --group-directories-first --color=auto'
 alias grep='grep --color=auto'
 
 # confirm before overwriting something
@@ -40,9 +50,6 @@ alias status='git status'
 # shutdown or reboot
 alias ssn="sudo shutdown now"
 alias sr="sudo reboot"
-
-# the terminal rickroll
-alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
 
 # youtube-dl
 alias ydl='youtube-dl'

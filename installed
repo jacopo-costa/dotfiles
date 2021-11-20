@@ -2,7 +2,6 @@ alsa-utils
 bash-completion
 discord
 dunst
-evince
 feh
 gnome-disk-utility
 gvfs
@@ -14,10 +13,7 @@ gvfs-smb
 htop
 lxappearance
 mpv
-mtpfs
-ntfs-3g
 pavucontrol
-pcmanfm
 picom
 pkgfile
 playerctl
@@ -25,9 +21,7 @@ polkit-gnome
 pulseaudio
 pulseaudio-alsa
 redshift
-rofi
 samba
-sshfs
 themix-full-git
 youtube-dl
 google-chrome

@@ -468,12 +468,12 @@
     <!-- Keybindings for other things -->
     <keybind key="W-e">
       <action name="Execute">
-        <command>pcmanfm</command>
+        <command>thunar</command>
       </action>
     </keybind>
     <keybind key="W-F9">
       <action name="Execute">
-        <command>chromium</command>
+        <command>google-chrome-stable</command>
       </action>
     </keybind>
     <!-- Rofi launcher -->
@@ -485,13 +485,13 @@
     <!-- Terminal -->
     <keybind key="C-A-t">
       <action name="Execute">
-        <command>termite</command>
+        <command>kitty</command>
       </action>
     </keybind>
     <!-- Quick HTOP -->
     <keybind key="C-Escape">
       <action name="Execute">
-        <command>termite -e htop</command>
+        <command>kitty -e htop</command>
       </action>
     </keybind>
     <!-- Screenshots -->

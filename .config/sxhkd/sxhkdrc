@@ -8,7 +8,7 @@ super + Return
 
 # program launcher
 super + @space
-	dmenu_run -i -p 'Cerca:' -l 5 -fn 'JetBrains Mono:pixelsize=15' -nb '#151515' -nf '#F5F5F5' -sb '#AC4142' -sf '#151515'
+	walmenu
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -64,7 +64,7 @@ XF86AudioPrev
 
 # dmenu
 XF86Search
-	dmenu_run -i -p 'Cerca:' -l 5 -fn 'JetBrains Mono:pixelsize=15' -nb '#151515' -nf '#F5F5F5' -sb '#AC4142' -sf '#151515'
+	walmenu
 
 # Chrome
 super + g
