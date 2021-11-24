@@ -8,12 +8,6 @@
 # Source bash-completion
 [ -r /usr/share/bash-completion/bash_completion   ] && . /usr/share/bash-completion/bash_completion
 
-# Import colorscheme from 'wal' asynchronously
-# &   # Run the process in the background.
-# ( ) # Hide shell job control messages.
-# Not supported in the "fish" shell.
-(cat ~/.cache/wal/sequences &)
-
 # Source command-not-found
 source /usr/share/doc/pkgfile/command-not-found.bash
 
