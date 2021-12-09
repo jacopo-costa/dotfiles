@@ -1,0 +1,30 @@
+2021/12/07-07:40:27.579 5d2 Reusing MANIFEST /home/jacopo/.config/google-chrome/Default/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/12/07-07:40:27.579 5d2 Recovering log #4
+2021/12/07-07:40:27.612 5d2 Reusing old log /home/jacopo/.config/google-chrome/Default/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb/000004.log 
+2021/12/07-07:43:44.052 665 Level-0 table #8: started
+2021/12/07-07:43:44.068 665 Level-0 table #8: 1066291 bytes OK
+2021/12/07-07:43:44.072 665 Delete type=0 #4
+2021/12/07-07:44:51.936 3cd Compacting 1@1 + 1@2 files
+2021/12/07-07:44:51.942 3cd Generated table #9@1: 350 keys, 36027 bytes
+2021/12/07-07:44:51.942 3cd Compacted 1@1 + 1@2 files => 36027 bytes
+2021/12/07-07:44:51.943 3cd compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/12/07-07:44:51.944 3cd Delete type=2 #8
+2021/12/07-07:44:51.944 3cd Delete type=2 #5
+2021/12/07-08:19:18.644 821 Level-0 table #11: started
+2021/12/07-08:19:18.664 821 Level-0 table #11: 1016223 bytes OK
+2021/12/07-08:19:18.667 821 Delete type=0 #7
+2021/12/07-08:19:25.431 7ff Compacting 1@1 + 1@2 files
+2021/12/07-08:19:25.440 7ff Generated table #12@1: 421 keys, 34207 bytes
+2021/12/07-08:19:25.440 7ff Compacted 1@1 + 1@2 files => 34207 bytes
+2021/12/07-08:19:25.441 7ff compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/12/07-08:19:25.442 7ff Delete type=2 #11
+2021/12/07-08:19:25.442 7ff Delete type=2 #9
+2021/12/07-08:25:56.694 8bf Level-0 table #14: started
+2021/12/07-08:25:56.710 8bf Level-0 table #14: 1062123 bytes OK
+2021/12/07-08:25:56.713 8bf Delete type=0 #10
+2021/12/07-08:26:40.060 821 Compacting 1@1 + 1@2 files
+2021/12/07-08:26:40.065 821 Generated table #15@1: 396 keys, 37089 bytes
+2021/12/07-08:26:40.065 821 Compacted 1@1 + 1@2 files => 37089 bytes
+2021/12/07-08:26:40.068 821 compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/12/07-08:26:40.068 821 Delete type=2 #12
+2021/12/07-08:26:40.068 821 Delete type=2 #14

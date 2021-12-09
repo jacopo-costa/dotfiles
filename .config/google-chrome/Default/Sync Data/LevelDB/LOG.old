@@ -1,0 +1,6 @@
+2021/12/09-10:01:13.377 2a3 Reusing MANIFEST /home/jacopo/.config/google-chrome/Default/Sync Data/LevelDB/MANIFEST-000001
+2021/12/09-10:01:13.378 2a3 Recovering log #4
+2021/12/09-10:01:13.385 2a3 Reusing old log /home/jacopo/.config/google-chrome/Default/Sync Data/LevelDB/000004.log 
+2021/12/09-10:04:47.960 881 Level-0 table #8: started
+2021/12/09-10:04:47.986 881 Level-0 table #8: 108253 bytes OK
+2021/12/09-10:04:48.003 881 Delete type=0 #4

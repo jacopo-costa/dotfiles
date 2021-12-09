@@ -1,0 +1,7 @@
+2021/12/09-10:13:48.528 4246 Reusing MANIFEST /home/jacopo/.config/Atom/Local Storage/leveldb/MANIFEST-000001
+2021/12/09-10:13:48.529 4246 Recovering log #3
+2021/12/09-10:13:48.531 4246 Level-0 table #3: started
+2021/12/09-10:13:48.547 4246 Level-0 table #3: 101236 bytes OK
+2021/12/09-10:13:48.547 4246 Recovering log #4
+2021/12/09-10:13:48.547 4246 Reusing old log /home/jacopo/.config/Atom/Local Storage/leveldb/000004.log 
+2021/12/09-10:13:48.550 4246 Delete type=0 #3

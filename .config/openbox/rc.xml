@@ -42,7 +42,7 @@
                   'Active' - where the active window is -->
   </placement>
   <theme>
-    <name>Calm</name>
+    <name>dotshare</name>
     <titleLayout>NLIMC</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
@@ -178,7 +178,6 @@
   </dock>
   <keyboard>
     <chainQuitKey>C-g</chainQuitKey>
-
     <!-- Keybindings for desktop switching -->
     <keybind key="C-A-Left">
       <action name="GoToDesktop">
@@ -275,7 +274,6 @@
     <keybind key="W-d">
       <action name="ToggleShowDesktop"/>
     </keybind>
-
     <!-- Tiling Windows -->
     <keybind key="W-KP_7">
       <action name="UnmaximizeFull"/>
@@ -377,7 +375,6 @@
     <keybind key="A-Return">
       <action name="ToggleFullscreen"/>
     </keybind>
-
     <!-- Keybindings for windows -->
     <keybind key="W-q">
       <action name="Close"/>
@@ -392,7 +389,6 @@
         <menu>client-menu</menu>
       </action>
     </keybind>
-
     <!-- Keybindings for window switching -->
     <keybind key="W-Tab">
       <action name="Execute">
@@ -400,9 +396,11 @@
       </action>
     </keybind>
     <keybind key="A-Tab">
-      <action name="NextWindow"/>
+      <action name="NextWindow">
+        <bar>no</bar>
+        <raise>yes</raise>
+      </action>
     </keybind>
-
     <!-- Keybindings for window switching with the arrow keys -->
     <keybind key="W-A-Right">
       <action name="DirectionalCycleWindows">
@@ -424,14 +422,12 @@
         <direction>down</direction>
       </action>
     </keybind>
-
     <!-- Keybindings for volume stuff -->
     <keybind key="C-A-p">
       <action name="Execute">
         <command>pavucontrol</command>
       </action>
     </keybind>
-
     <!-- volume control -->
     <keybind key="XF86AudioRaiseVolume">
       <action name="Execute">
@@ -448,7 +444,6 @@
         <command>bash -c '~/.scripts/change-volume mute'</command>
       </action>
     </keybind>
-
     <!-- PlayerCTL control -->
     <keybind key="XF86AudioStop">
       <action name="Execute">
@@ -470,40 +465,35 @@
         <command>playerctl --player=playerctld next</command>
       </action>
     </keybind>
-
     <!-- Keybindings for other things -->
-    <keybind key="W-F10">
+    <keybind key="W-e">
       <action name="Execute">
         <command>thunar</command>
       </action>
     </keybind>
     <keybind key="W-F9">
       <action name="Execute">
-        <command>chromium</command>
+        <command>google-chrome-stable</command>
       </action>
     </keybind>
-
     <!-- Rofi launcher -->
     <keybind key="W-space">
       <action name="Execute">
         <command>rofi -show drun -theme "/home/jacopo/.config/rofi/rofi-theme/start-menu.rasi"</command>
       </action>
     </keybind>
-
     <!-- Terminal -->
     <keybind key="C-A-t">
       <action name="Execute">
-        <command>termite</command>
+        <command>kitty</command>
       </action>
     </keybind>
-
     <!-- Quick HTOP -->
     <keybind key="C-Escape">
       <action name="Execute">
-        <command>termite -e htop</command>
+        <command>kitty -e htop</command>
       </action>
     </keybind>
-
     <!-- Screenshots -->
     <keybind key="Print">
       <action name="Execute">
@@ -515,11 +505,11 @@
         <command>bash -c '~/.scripts/makeScreenshot window'</command>
       </action>
     </keybind>
-  <keybind key="C-S-Print">
-    <action name="Execute">
-      <command>bash -c '~/.scripts/makeScreenshot partial'</command>
-    </action>
-  </keybind>
+    <keybind key="C-S-Print">
+      <action name="Execute">
+        <command>bash -c '~/.scripts/makeScreenshot partial'</command>
+      </action>
+    </keybind>
   </keyboard>
   <mouse>
     <dragThreshold>1</dragThreshold>
@@ -538,8 +528,7 @@
         <action name="Focus"/>
         <action name="Raise"/>
       </mousebind>
-      <mousebind button="W-Left" action="Click">
-        <action name="Unshade"/>1
+      <mousebind button="W-Left" action="Click"><action name="Unshade"/>1
       </mousebind>
       <mousebind button="W-Left" action="Drag">
         <action name="Move"/>
@@ -593,7 +582,7 @@
         <action name="Move"/>
       </mousebind>
       <mousebind button="Left" action="DoubleClick">
-        <action name="ToggleMaximize"/>
+        <action name="ToggleMaximizeFull"/>
       </mousebind>
       <mousebind button="Up" action="Click">
         <action name="if">

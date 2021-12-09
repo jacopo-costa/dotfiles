@@ -5,9 +5,22 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# Source bash-completion
+[ -r /usr/share/bash-completion/bash_completion   ] && . /usr/share/bash-completion/bash_completion
+
+# Source command-not-found
+source /usr/share/doc/pkgfile/command-not-found.bash
+
+# Pretend cd when only path
+shopt -s autocd
+
+# Plex
+alias startplex='sudo systemctl start plexmediaserver.service'
+alias stopplex='sudo systemctl stop plexmediaserver.service'
+
 # navigation
-alias ..='cd ..' 
-alias ls='ls -lA --color=auto'
+alias ..='cd ..'
+alias ls='ls -lAh --group-directories-first --color=auto'
 alias grep='grep --color=auto'
 
 # confirm before overwriting something
@@ -32,15 +45,9 @@ alias status='git status'
 alias ssn="sudo shutdown now"
 alias sr="sudo reboot"
 
-# merge Xresources
-alias merge='xrdb -merge ~/.Xresources'
-
-# the terminal rickroll
-alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
-
-# updates
-alias yayf='yay && flatpak update'
+# youtube-dl
+alias ydl='youtube-dl'
 
 PS1="\n\[\e[32m\]\w\[\e[m\] \n> "
 
-pfetch | lolcat
+pfetch

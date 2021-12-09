@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
 
-rofi_command="rofi -theme /home/jacopo/.config/rofi/rofi-theme/power-menu.rasi"
+rofi_command="rofi -theme ~/.config/rofi/rofi-theme/power-menu.rasi"
 
 # Options
-shutdown=""
+shutdown="⏻"
 reboot=""
 lock=""
 

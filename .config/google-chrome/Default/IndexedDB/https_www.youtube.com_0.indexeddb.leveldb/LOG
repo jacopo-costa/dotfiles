@@ -1,0 +1,12 @@
+2021/12/07-10:11:20.301 15fd Reusing MANIFEST /home/jacopo/.config/google-chrome/Default/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/12/07-10:11:20.301 15fd Recovering log #13
+2021/12/07-10:11:20.315 15fd Reusing old log /home/jacopo/.config/google-chrome/Default/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb/000013.log 
+2021/12/07-10:22:34.757 3c96 Level-0 table #18: started
+2021/12/07-10:22:34.778 3c96 Level-0 table #18: 1024012 bytes OK
+2021/12/07-10:22:34.782 3c96 Delete type=0 #13
+2021/12/07-10:22:34.973 3b9d Compacting 1@1 + 1@2 files
+2021/12/07-10:22:34.981 3b9d Generated table #19@1: 426 keys, 38443 bytes
+2021/12/07-10:22:34.981 3b9d Compacted 1@1 + 1@2 files => 38443 bytes
+2021/12/07-10:22:34.984 3b9d compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/12/07-10:22:34.984 3b9d Delete type=2 #18
+2021/12/07-10:22:34.984 3b9d Delete type=2 #15

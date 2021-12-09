@@ -1,0 +1,20 @@
+2021/12/09-10:13:05.981 402f Reusing MANIFEST /home/jacopo/.config/google-chrome/Default/Local Extension Settings/cjpalhdlnbpafiamejdnhcphjbkeiagm/MANIFEST-000001
+2021/12/09-10:13:05.982 402f Recovering log #26
+2021/12/09-10:13:05.993 402f Reusing old log /home/jacopo/.config/google-chrome/Default/Local Extension Settings/cjpalhdlnbpafiamejdnhcphjbkeiagm/000026.log 
+2021/12/09-10:16:11.787 44c5 Level-0 table #30: started
+2021/12/09-10:16:11.895 44c5 Level-0 table #30: 2682307 bytes OK
+2021/12/09-10:16:11.899 44c5 Delete type=0 #26
+2021/12/09-10:16:11.903 44c5 Compacting 4@0 + 4@1 files
+2021/12/09-10:16:12.051 44c5 Generated table #31@0: 15 keys, 2313994 bytes
+2021/12/09-10:16:12.173 44c5 Generated table #32@0: 9 keys, 2102490 bytes
+2021/12/09-10:16:12.311 44c5 Generated table #33@0: 13 keys, 2004687 bytes
+2021/12/09-10:16:12.311 44c5 Compacted 4@0 + 4@1 files => 6421171 bytes
+2021/12/09-10:16:12.313 44c5 compacted to: files[ 0 3 1 0 0 0 0 ]
+2021/12/09-10:16:12.314 44c5 Delete type=2 #25
+2021/12/09-10:16:12.314 44c5 Delete type=2 #20
+2021/12/09-10:16:12.314 44c5 Delete type=2 #18
+2021/12/09-10:16:12.314 44c5 Delete type=2 #19
+2021/12/09-10:16:12.314 44c5 Delete type=2 #27
+2021/12/09-10:16:12.314 44c5 Delete type=2 #30
+2021/12/09-10:16:12.314 44c5 Delete type=2 #17
+2021/12/09-10:16:12.314 44c5 Delete type=2 #22

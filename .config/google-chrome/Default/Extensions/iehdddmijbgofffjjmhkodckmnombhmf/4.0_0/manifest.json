@@ -1,0 +1,17 @@
+{
+   "app": {
+      "launch": {
+         "web_url": "http://www.knok.com/"
+      },
+      "urls": [ "http://www.knok.com/" ]
+   },
+   "description": "Knok is a network of trusted families, who let each other stay at our beautiful homes when we're not there.",
+   "icons": {
+      "128": "ch_128x128.jpg"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDldEhbb30/W0WU1ewU1+mKII6lZWh4KzZ+CNkXBaEZfwZ4HXgD7FDzLah+FrrDDDGO6xrgoF0h1HBpL8vVlk+AAz+HLmXrnj78W/ROt+TZEzhENBgMlDfoOwiosKwqqvY8rhQgJnfVqXDLpZHAoPaVpuAXHIE9dWfWyvpwlZe/RwIDAQAB",
+   "manifest_version": 2,
+   "name": "Knok | Family Travel",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "4.0"
+}

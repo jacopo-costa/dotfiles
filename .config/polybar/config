@@ -17,21 +17,22 @@
 ;==========================================================
 
 [colors]
-background = ${xrdb:background}
-background-alt = ${xrdb:color8}
-foreground = ${xrdb:foreground}
-foreground-alt = ${xrdb:color7}
-primary = ${xrdb:color7}
-secondary = ${xrdb:color3}
-alert = #bb0000
+background = ${xrdb:color0:#222}
+background-alt = #505050
+foreground = ${xrdb:color7:#222}
+foreground-alt = ${xrdb:color7:#222}
+primary = ${xrdb:color1:#222}
+secondary = ${xrdb:color2:#222}
+alert = ${xrdb:color3:#222}
+
+[var]
+wireless-interface      = wlp3s0
+eth-interface		= enp3s0
+monitor			= HDMI-0
 
 [bar/simplebar]
-;monitor = ${env:MONITOR:HDMI-1}
 width = 100%
 height = 26
-;offset-x = 1%
-;offset-y = 1%
-radius = 0
 fixed-center = true
 
 locale = it_IT.UTF-8
@@ -42,42 +43,39 @@ foreground = ${colors.foreground}
 line-size = 2
 line-color = ${colors.primary}
 
-border-size = 4
+border-size = 0
 border-color = #00000000
 
-padding-left = 1
+padding-left = 0
 padding-right = 0
 
 module-margin-left = 1
 module-margin-right = 1
 
-font-0 = Roboto Mono:style=Medium:pixelsize=10;1
-font-1 = unifont:style=truetype:size=10:antialias=false;1
-font-2 = siji:pixelsize=10;1
-font-3 = Font Awesome 5 Free:style=Regular:size=10;1
-font-4 = Font Awesome 5 Free:style=Solid:size=10;1
-font-5 = Font Awesome 5 Brands:style=Regular:size=10;1
+font-0 = JetBrains Mono:style=Medium:pixelsize=10;2
+font-1 = Font Awesome 5 Free:style=Regular:size=10;2
+font-2 = Font Awesome 5 Free:style=Solid:size=10;1
+font-3 = Font Awesome 5 Brands:style=Regular:size=10;2
 
-modules-left = xwindow
-modules-center = bspwm
-modules-right = eth pulseaudio battery date powermenu
+modules-left = bspwm
+modules-center = date
+modules-right = xkeyboard memory cpu wired-network wireless-network pulseaudio battery powermenu
 
 tray-position = left
 tray-padding = 2
 tray-background = ${colors.primary}
 
 wm-restack = bspwm
-;override-redirect = true
 
-scroll-up = bspwm-desknext
-scroll-down = bspwm-deskprev
+;scroll-up = bspwm-desknext
+;scroll-down = bspwm-deskprev
 
 cursor-click = pointer
 cursor-scroll = ns-resize
 
 [module/xwindow]
 type = internal/xwindow
-label = %title:0:60:...%
+label = %title:0:80:...%
 
 [module/bspwm]
 type = internal/bspwm
@@ -88,6 +86,7 @@ label-focused-underline= ${colors.primary}
 label-focused-padding = 1
 
 label-occupied = %icon%
+label-occupied-foreground = ${colors.foreground}
 label-occupied-padding = 1
 
 label-urgent = %icon%!
@@ -98,34 +97,25 @@ label-empty = %icon%
 label-empty-foreground = ${colors.foreground-alt}
 label-empty-padding = 1
 
-; Separator in between workspaces
-; label-separator = |
-
-ws-icon-0 = 1;
-ws-icon-1 = 2;
-ws-icon-2 = 3;
-ws-icon-3 = 4;
-
-ws-icon-default = 
+ws-icon-0 = 1;1
+ws-icon-1 = 2;2
+ws-icon-2 = 3;3
+ws-icon-3 = 4;4
+ws-icon-4 = 5;5
 
 [module/battery]
 type = internal/battery
 
-full-at = 96
+full-at = 100
 
 battery = BAT0
 adapter = AC
 
-time-format = %H:%M
-
-format-charging = <animation-charging> <label-charging>
-label-charging = %percentage%% Completa entro %time%
-
+format-charging = <label-charging>
 format-discharging = <ramp-capacity> <label-discharging>
-label-discharging = %percentage%% %time%
 
-format-full = <ramp-capacity> <label-full>
-label-full = %percentage%%
+label-charging =  %percentage%%
+label-discharging = %percentage%%
 
 ramp-capacity-0 = 
 ramp-capacity-1 = 
@@ -133,25 +123,71 @@ ramp-capacity-2 = 
 ramp-capacity-3 = 
 ramp-capacity-4 = 
 
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
-animation-charging-3 = 
-animation-charging-4 = 
-animation-charging-framerate = 1000
+[module/cpu]
+type = internal/cpu
 
-[module/mpd]
-type = internal/mpd
-format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
+interval = 1
 
-icon-prev = 
-icon-stop = 
-icon-play = 
-icon-pause = 
-icon-next = 
+label =  %percentage%%
 
-label-song-maxlen = 25
-label-song-ellipsis = true
+[module/memory]
+type = internal/memory
+
+interval = 1
+
+label =  %percentage_used%%
+
+[module/temperature]
+type = internal/temperature
+
+interval = 1
+
+; Thermal zone to use
+; To list all the zone types, run 
+; $ for i in /sys/class/thermal/thermal_zone*; do echo "$i: $(<$i/type)"; done
+; Default: 0
+thermal-zone = 0
+
+; Full path of temperature sysfs path
+; Use `sensors` to find preferred temperature source, then run
+; $ for i in /sys/class/hwmon/hwmon*/temp*_input; do echo "$(<$(dirname $i)/name): $(cat ${i%_*}_label 2>/dev/null || echo $(basename ${i%_*})) $(readlink -f $i)"; done
+; to find path to desired file
+; Default reverts to thermal zone setting
+hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon2/temp1_input
+
+; Base temperature for where to start the ramp (in degrees celsius)
+; Default: 0
+base-temperature = 20
+
+; Threshold temperature to display warning label (in degrees celsius)
+; Default: 80
+warn-temperature = 60
+
+label = TEMP %temperature-c%
+
+[module/wired-network]
+type = internal/network
+interface = ${var.eth-interface}
+
+interval = 30.0
+
+format-connected = <label-connected>
+format-disconnected = <label-disconnected>
+
+label-connected = 
+label-disconnected = ""
+
+[module/wireless-network]
+type = internal/network
+interface = ${var.wireless-interface}
+
+interval = 30.0
+
+format-connected = <label-connected>
+format-disconnected = <label-disconnected>
+
+label-connected =  %essid%
+label-disconnected = ""
 
 [module/date]
 type = internal/date
@@ -164,21 +200,22 @@ time = %H:%M
 time-alt = %H:%M:%S
 
 format-prefix = " "
-format-prefix-foreground = ${colors.foreground}
-#format-underline = #0a6cf5
+format-prefix-foreground = ${colors.foreground-alt}
 
 label = %date% %time%
 
 [module/pulseaudio]
 type = internal/pulseaudio
+use-ui-max = false
+interval = 2
 
-format-volume = <ramp-volume> <label-volume>
-
-label-muted = Muto
-
+format-volume = <ramp-volume>
+label-muted =  Muto
 ramp-volume-0 = 
 ramp-volume-1 = 
 ramp-volume-2 = 
+
+click-right = pavucontrol
 
 [module/powermenu]
 type = custom/menu
@@ -187,10 +224,10 @@ expand-right = true
 
 format-spacing = 1
 
-format-foreground = ${colors.background}
+format-foreground = ${colors.foreground}
 format-background = ${colors.primary}
 
-label-open = "  "
+label-open = "  "
 label-open-foreground = ${colors.foreground}
 label-close ="  Cancella"
 label-close-foreground = ${colors.foreground}
@@ -199,19 +236,23 @@ label-separator-foreground = ${colors.foreground-alt}
 
 
 menu-0-0 = Riavvia
-menu-0-0-exec = menu-open-1
+menu-0-0-exec = reboot
 menu-0-1 = "Spegni "
-menu-0-1-exec = menu-open-2
+menu-0-1-exec = shutdown now
 
-menu-1-0 = Cancella
-menu-1-0-exec = menu-open-0
-menu-1-1 = "Riavvia "
-menu-1-1-exec = reboot
+[module/xkeyboard]
+type = internal/xkeyboard
 
-menu-2-0 = Spegni
-menu-2-0-exec = shutdown now
-menu-2-1 = "Cancella "
-menu-2-1-exec = menu-open-0
+format = <label-indicator>
+format-foreground = ${colors.foreground}
+format-background = ${colors.primary}
+
+label-indicator-on-capslock = "  "
+label-indicator-off-capslock =
+label-indicator-on-numlock = "  "
+label-indicator-off-numlock =
+label-indicator-on-scrolllock = "  "
+label-indicator-off-scrolllock =
 
 [settings]
 screenchange-reload = true
@@ -220,3 +261,5 @@ pseudo-transparency = true
 [global/wm]
 margin-top = 0
 margin-bottom = 0
+
+; vim:ft=dosini
